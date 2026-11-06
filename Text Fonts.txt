@@ -1,0 +1,60 @@
+Hero Section:
+--Hero Title:
+ -Size: 44px or 48px and in small screen: 32px
+ -Weight: Bold
+ -Line-height: 1.1 or 1.2
+--Subtitle/Description:
+ -Size: 14px or 16px
+ -Weight: normal
+--show Now Button:
+ -Size: 14px or 16px
+ -Weight: medium (500 or 600)
+========================================================================
+Just In & Best Seller & Shop by & Categories:
+--Section Titles:
+ -Size: 28px or 32px
+--Products card Title: 
+ -Size: 14px or 16px
+ -Weight: medium (500 or 600)
+--Product Price: 
+ -Size: 14px (for new price) and 12px (for old price)
+ -Weight: 600 (for new price) and 500 (for old price)
+--Badged Like (New/Hot/-50%)
+ -Size: 10px or 12px and Uppercase
+ -Weight: Bold
+========================================================================
+Product Detail/Tray Table Modal:
+--Tray Table: 
+ -Size: 24px or 28px
+ -Weigh: 600 (semi-Bold)
+--main Price: 
+ -Size: 20px or 24px
+ -Weight: Bold
+--Timer & Measurrments Labels:
+ -Size: 12px or 14px
+ -Weight: medium (500 or 600)
+--Add to Card Button:
+ -Size 14px or 16px
+ -Weight: 500
+========================================================================
+Sign in Page:
+--Sign in Header:
+ -Size: 32px or 40px
+ -Weight: medium (500 or 600)
+--Form Label & Placeholder:
+ -Size: 14px
+ -Weight: normal
+--Forgot Password/Sign up:
+ -Size: 12px or 14px
+ -Weight: 600 (semi-Bold)
+=========================================================================
+Newsletter & Footer:
+--Join Our Newsletter:
+ -Size: 24px or 28px
+ -Weight: 500
+--Footer Links & Headers:
+ -Size: 10px for Heading texts and 12px or 14px For Links
+ -Wight: 500 for Heading text and normal for Links
+--Copyright text:
+ -Size: 12px
+ -Weight: normal
