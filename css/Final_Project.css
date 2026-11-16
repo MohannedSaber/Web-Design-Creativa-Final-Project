@@ -58,5 +58,7 @@ padding-right:30% ;
   color: red;
 }
 .owl-dots{
-    
+    top: -10%;
+    position: absolute;
+    right: 0;
 }
