@@ -28,3 +28,4 @@ Footer Section:
 -Footer background: #111827 or #0f172a
 -Texts & links: #9ca3af and white for heading text
 -socialmedia icons: #6b7280
+"nav-link" data-bs-toggle="tab"
