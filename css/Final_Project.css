@@ -27,6 +27,14 @@
     border: none;
     border-radius: 5px;
 }
+.bg-color{
+  background-color:#eeeeee;
+}
+.a-hover:hover{
+    color: black;
+
+}
+
 
 
 
