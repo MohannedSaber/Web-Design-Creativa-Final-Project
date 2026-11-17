@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Account</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/Final_Project.css"/>
+</head>
+
+<body class="bg-white">
+    <!-- navbar -->
+<nav class="container-filed" >
+<div class=" justify-content-between d-flex gap-3  px-1  bg-white fg-black ">
+<h1 class=" w-25  mx-12 px-8 fs-xl text py-3  ">VisioCreate.</h1>
+<ul class="justify-content-start d-flex gap-12 align-items-center my-5 w-50 ps-12">
+<li class="nav-item"><a class="nav-link " aria-current="page" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+</ul>
+
+<div class=" d-flex  justify-content-end align-items-center gap-4 px-12">
+    <a class="border-0 bg-transparent" href="#"><i class="fa-solid fa-magnifying-glass fg-black "></i></a>
+    <a class="border-0 bg-transparent " href="sign-in.html"><i class="fa-regular fa-circle-user fg-black "></i></a>
+    <a class="border-0 bg-transparent " href="#"><i class="fa-solid fa-box fg-black"></i></a>
+    <button type="button" class="border-0 bg-black rounded-pill h-50 cart-btn" aria-label="#">0</button>
+</div>
+</div>
+</nav>
+<!-- title -->
+<div class="container py-5">
+    <h1 class="text-center fw-medium mb-5 fs-xxl fg-black mt-5">My Account</h1>
+    <div class="row g-12 justify-content-center">
+
+    <!-- small-card -->
+    <div class="col-3">
+        <div class="rounded-5 bg-color p-6">
+            <div class="text-center mb-6">
+                <div class="mb-2 position-relative d-inline-block">
+                    <img src="assets/0be2e9b0762c04b6cba225e253f82b64.jpg" alt="avatar" class="avatar rounded-circle d-block">
+                    <span class=" avatar-badge position-absolute bottom-0 end-0 d-flex align-items-center justify-content-center"><i class="fa-solid fa-camera"></i></span>
+                </div>
+                <h2 class="fw-medium fs-lg fg-black">Sofia Havertz</h2>
+            </div>
+            <nav class="d-flex flex-column">
+                <a href="#" class="a-hover gap-3 text-decoration-none fg-black border-bottom border-2 border-black mb-6">Account</a>
+                <a href="#" class="a-hover mb-4 text-decoration-none fg-3 ps-2">Address</a>
+                <a href="#" class="a-hover mb-4 text-decoration-none fg-3 ps-2">Orders</a>
+                <a href="#" class="a-hover mb-4 text-decoration-none fg-3 ps-2">Wishlist</a>
+                <a href="#" class="a-hover mb-4 text-decoration-none fg-3 ps-2">Log Out</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- form -->
+    <!-- account details -->
+    <section class="col-8">
+    <form class="mb-6">
+        <h2 class="fw-bold fs-lg fg-black mb-6">Account Details</h2>
+        <div class="mb-4">
+            <label for="firstName" class="form-label fw-semibold fs-md fg-inverse">First Name *</label>
+            <input type="text" class="form-control bg-transparent border-none shadow-none p-3 fg-black mb-4 rounded-5 border-secondary-subtle" id="firstName" placeholder="First Name">
+        </div>
+        <div class="mb-4">
+            <label for="lastName" class="form-label fw-semibold fs-md fg-inverse">Last Name *</label>
+            <input type="text" class="form-control bg-transparent border-none shadow-none p-3 fg-black mb-4 rounded-5 border-secondary-subtle" id="lastName" placeholder="Last Name">
+        </div>
+        <div class="mb-4">
+            <label for="DisplayName" class="form-label fw-semibold fs-md fg-inverse">Display Name *</label>
+            <input type="text" class="form-control bg-transparent border-none shadow-none p-3 fg-black mb-4 rounded-5 border-secondary-subtle" id="DisplayName" placeholder="Display Name">
+            <p class="form-text fg-inverse">This will be how your name will be displayed in the account section and in reviews.</p>
+        </div>
+    </form>
+
+    <!-- password change -->
+    <form>
+        <h2 class="fw-bold fs-lg fg-black mb-6">Password</h2>
+        <div class="mb-4">
+            <label for="oldPassword" class="form-label fw-semibold fs-md fg-inverse">Old Password *</label>
+            <input type="password" class="form-control bg-transparent border-none shadow-none p-3 fg-black mb-4 rounded-5 border-secondary-subtle" id="oldPassword" placeholder="Old Password">
+        </div>
+        <div class="mb-4">
+            <label for="newPassword" class="form-label fw-semibold fs-md fg-inverse">New Password *</label>
+            <input type="password" class="form-control bg-transparent border-none shadow-none p-3 fg-black mb-4 rounded-5 border-secondary-subtle" id="newPassword" placeholder="New Password">
+        </div>
+        <div class="mb-4">
+            <label for="repeatNewPassword" class="form-label fw-semibold fs-md fg-inverse">Repeat New Password *</label>
+            <input type="password" class="form-control bg-transparent border-none shadow-none p-3 fg-black mb-4 rounded-5 border-secondary-subtle" id="repeatNewPassword" placeholder="Repeat New Password">
+        </div>
+    </form>
+    <button type="submit" class="btn btn-dark rounded-5 px-6 py-3 mb-8">Save Changes</button>
+    </section>
+    </div>
+</div>
+
+<!-- footer -->
+<footer class="bg-semiblack fg-white">
+    <div class="container p-12">
+    <div class="d-flex justify-content-between align-items-center mb-12">
+        <div class="title">
+            <h3 class="border-end w-fit pe-8 border-5 d-inline-block fs-2xl">VisioCreate</h3>
+            <p class="fg-gray d-inline-block ps-8 fs-lg">Gift & Decoration Store</p>
+        </div>
+        <ul class="d-flex gap-12">
+            <li>
+            <a href="#" class="text-decoration-none fg-gray fs-lg">Home</a>
+            </li>
+            <li>
+            <a href="#" class="text-decoration-none fg-gray fs-lg">Shop</a>
+            </li>
+            <li>
+            <a href="#" class="text-decoration-none fg-gray fs-lg">Product</a>
+            </li>
+            <li>
+            <a href="#" class="text-decoration-none fg-gray fs-lg">Blog</a>
+            </li>
+            <li>
+            <a href="#" class="text-decoration-none fg-gray fs-lg">Contact Us</a>
+            </li>
+        </ul>
+        </div>
+        <div class="copyright d-flex justify-content-between align-items-center border-top border-2 pt-6 pb-6 fs-lg">
+        <div class="d-flex align-items-center">
+            <p class="me-12 fg-gray mb-0">Copyright &copy; 2023 VisioCreate. All rights reserved</p>
+            <a href="#" class="fg-white fw-bold text-decoration-none me-12">Privacy Policy</a>
+            <a href="#" class="fg-white fw-bold text-decoration-none">Terms of Use</a>
+        </div>
+        <ul class="icons d-flex gap-6 mb-0 fs-xl">
+            <li>
+            <a href="#" class="fg-white"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+            <a href="#" class="fg-white"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+            <a href="#" class="fg-white"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Final_Project.js"></script>
+</body>
+</html>
