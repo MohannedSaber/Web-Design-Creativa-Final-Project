@@ -1,7 +1,7 @@
 .image-card{
     position: relative;
+    min-height: 530px;
     height: 100%;
-    min-height: 500px;
     border-radius: 25px;
     overflow: hidden;
 }
@@ -32,7 +32,20 @@
 }
 .a-hover:hover{
     color: black;
+}
 
+.announcement-bar{
+    background-color: #eeeeee ;
+}
+.main{
+  min-height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/WhatsApp Image 2026-11-18 at 5.00.54 PM.jpeg");
+  border-radius: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  
 }
 
 
@@ -255,3 +268,5 @@ padding-right:30% ;
   background-color: #eee;
 }
 /* End Contact Us Page
+
+
