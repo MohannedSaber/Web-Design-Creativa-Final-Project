@@ -1,6 +1,5 @@
-
 * {
-    font-family: "Cairo" , sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 html {
@@ -28,64 +27,78 @@ ol {
   background-color: #141718;
 }
 
-header{
-    background-color:#f7999d ;
-    
+header {
+  background-color: #f7999d;
 }
-.alert{
-    height: 50px;
-}
-
-.time{
-    margin-left: 41%;
-
-}
-.bg-transparent{
-    background-color: transparent;
-}
-.img{
-    background-image: url(/assets/image_no_text.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 700px;
-}
-.Unveil{
-    font-size: 125px;
-}
-.now{
-    color: #f5545c ;
-    font-weight: bold;
-}
-.just{
-    width: 100px;
-    height: 350px;
-}
-.heart{
-    display: none;
-
-}
-.item-cart:hover .heart{
-display: flex;
-}
-.button-cart{
-    display: none;
-
-}
-.item-cart:hover .button-cart{
-display: flex;
-padding-left:30% ;
-padding-right:30% ;
+.alert {
+  height: 50px;
 }
 
+.time {
+  margin-left: 41%;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.img {
+  background-image: url(/assets/image_no_text.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+.Unveil {
+  font-size: 105px;
+}
+.now {
+  color: #f5545c;
+  font-weight: bold;
+}
+.just {
+  width: 100px;
+  height: 350px;
+}
+.heart {
+  display: none;
+}
+.item-cart:hover .heart {
+  display: flex;
+}
+.button-cart {
+  display: none;
+}
+.item-cart:hover .button-cart {
+  display: flex;
+  padding-left: 30%;
+  padding-right: 30%;
+}
 
 .wish.active i {
   color: red;
 }
-.owl-dots{
-    top: -10%;
-    position: absolute;
-    right: 0;
+.owl-dots {
+  top: -10%;
+  position: absolute;
+  right: 0;
+}
+
+.best {
+  height: 200px;
+}
+.bg-green {
+  background-color: #10b981;
+}
+
+del {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgba(128, 128, 128, 0.568);
+}
+.bg-gray {
+  background-color: #9e9e9e34;
+}
+.fg-blue {
+  color: #3b82f6;
 }
 
 /* Start Product Page */
@@ -215,40 +228,38 @@ padding-right:30% ;
   background-color: #eee;
 }
 /* End Contact Us Page */
-.image-card{
-    position: relative;
-    height: 100%;
-    min-height: 500px;
-    border-radius: 25px;
-    overflow: hidden;
+.image-card {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
-.sign-in-image{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.sign-in-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.form-input{
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #9ca3af;
-    border-radius: 0;
-    box-shadow: none;
+.form-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #9ca3af;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.sign-in-btn{
-    background-color: #2563eb ;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+.sign-in-btn {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
 }
-.bg-color{
-  background-color:#eeeeee;
+.bg-color {
+  background-color: #eeeeee;
 }
-.a-hover:hover{
-    color: black;
-
+.a-hover:hover {
+  color: black;
 }
-

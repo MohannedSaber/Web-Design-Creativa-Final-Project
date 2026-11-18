@@ -1,37 +1,40 @@
 // show or hide password
 const password = document.getElementById("password");
 const passwordIcon = document.getElementById("password-icon");
-
-passwordIcon.addEventListener("click", () => {
+if (passwordIcon)
+  passwordIcon.addEventListener("click", () => {
     const show = password.type === "password";
     password.type = show ? "text" : "password";
-    passwordIcon.setAttribute("aria-label", show ? "Hide password" : "Show password");
+    passwordIcon.setAttribute(
+      "aria-label",
+      show ? "Hide password" : "Show password",
+    );
     passwordIcon.style.opacity = show ? "0.5" : "1";
-})
+  });
 
 // form validation
 const form = document.getElementById("sign-in-form");
 const message = document.getElementById("message");
-form.addEventListener("submit", (e) => {
+if (form)
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     const inputfields = form.querySelectorAll("[required]");
     let isValid = true;
     inputfields.forEach((f) => {
-        const value = f.value.trim() !== "";
-        f.classList.toggle("is-invalid", !value);
-        if(!value) isValid = false;
+      const value = f.value.trim() !== "";
+      f.classList.toggle("is-invalid", !value);
+      if (!value) isValid = false;
     });
-    if(isValid) {
-        message.classList.remove("d-none");
-        setTimeout(() => 
-        message.classList.add("d-none") , 3000);
-        console.log("signed in" , {
-            email: form.email.value,
-            password: form.password.value,
-            rememberMe: form.rememberMe.checked
-        });
+    if (isValid) {
+      message.classList.remove("d-none");
+      setTimeout(() => message.classList.add("d-none"), 3000);
+      console.log("signed in", {
+        email: form.email.value,
+        password: form.password.value,
+        rememberMe: form.rememberMe.checked,
+      });
     }
-    });
+  });
 //Choose Color for Hoodie
 let colors = document.querySelectorAll(".choose-color .img-list li");
 
@@ -52,27 +55,27 @@ colors.forEach(function (color) {
 let minus = document.querySelector("#minus");
 let plus = document.querySelector("#plus");
 let quantity = document.querySelector("#quantity");
-
-plus.addEventListener("click", function () {
-  quantity.textContent++;
-});
-
-minus.addEventListener("click", function () {
-  if (quantity.textContent > 1) {
-    quantity.textContent--;
-  }
-});
+if (plus)
+  plus.addEventListener("click", function () {
+    quantity.textContent++;
+  });
+if (minus)
+  minus.addEventListener("click", function () {
+    if (quantity.textContent > 1) {
+      quantity.textContent--;
+    }
+  });
 //Change Color Heart for wishlist button
 let wishlist = document.querySelector("#wishlist");
+if (wishlist)
+  wishlist.addEventListener("click", function () {
+    wishlist.classList.toggle("active");
 
-wishlist.addEventListener("click", function () {
-  wishlist.classList.toggle("active");
+    let heart = wishlist.querySelector("i");
 
-  let heart = wishlist.querySelector("i");
-
-  heart.classList.toggle("fa-regular");
-  heart.classList.toggle("fa-solid");
-});
+    heart.classList.toggle("fa-regular");
+    heart.classList.toggle("fa-solid");
+  });
 
 $(".owl-carousel").owlCarousel({
   loop: true,
@@ -88,4 +91,34 @@ $(".owl-carousel").owlCarousel({
       items: 5,
     },
   },
+});
+
+// ======================================================
+var owl = $(".owl-carousel");
+owl.owlCarousel({
+  items: 4,
+  loop: true,
+  margin: 10,
+  // autoplay:true,
+  autoplayTimeout: 1000,
+  autoplayHoverPause: true,
+});
+let wishes = document.querySelectorAll(".wish");
+
+wishes.forEach(function (wish) {
+  wish.addEventListener("click", function () {
+    wish.classList.toggle("active");
+
+    let heart = wish.querySelector("i");
+
+    heart.classList.toggle("fa-regular");
+    heart.classList.toggle("fa-solid");
+  });
+});
+const cartBtn = document.querySelector(".cart-btn");
+
+document.addEventListener("click", function (e) {
+  if (e.target.closest(".button-cart")) {
+    cartBtn.textContent = Number(cartBtn.textContent) + 1;
+  }
 });
