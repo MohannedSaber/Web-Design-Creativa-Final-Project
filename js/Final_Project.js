@@ -77,32 +77,29 @@ if (wishlist)
     heart.classList.toggle("fa-solid");
   });
 
-$(".owl-carousel").owlCarousel({
+var owl = $(".owl-carousel");
+owl.owlCarousel({
+  items: 4.5,
   loop: true,
   margin: 10,
+  autoplay: true,
+  autoplayTimeout: 1000,
+  autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 1,
+      items: 1.5,
     },
     600: {
       items: 3,
     },
     1000: {
-      items: 5,
+      items: 4.5,
     },
   },
 });
 
 // ======================================================
-var owl = $(".owl-carousel");
-owl.owlCarousel({
-  items: 4,
-  loop: true,
-  margin: 10,
-  // autoplay:true,
-  autoplayTimeout: 1000,
-  autoplayHoverPause: true,
-});
+
 let wishes = document.querySelectorAll(".wish");
 
 wishes.forEach(function (wish) {
