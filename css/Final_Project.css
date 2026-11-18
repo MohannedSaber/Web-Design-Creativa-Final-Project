@@ -76,7 +76,7 @@ header {
 .wish.active i {
   color: red;
 }
-.owl-dots {
+.just-in-images .owl-dots {
   top: -10%;
   position: absolute;
   right: 0;
