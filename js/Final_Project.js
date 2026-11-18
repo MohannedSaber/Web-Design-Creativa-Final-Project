@@ -55,3 +55,33 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
+
+// ======================================================
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:4,
+    loop:true,
+    margin:10,
+    // autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true
+});
+let wishes = document.querySelectorAll(".wish");
+
+wishes.forEach(function (wish) {
+  wish.addEventListener("click", function () {
+    wish.classList.toggle("active");
+
+    let heart = wish.querySelector("i");
+
+    heart.classList.toggle("fa-regular");
+    heart.classList.toggle("fa-solid");
+  });
+});
+const cartBtn = document.querySelector(".cart-btn");
+
+document.addEventListener("click", function (e) {
+  if (e.target.closest(".button-cart")) {
+    cartBtn.textContent = Number(cartBtn.textContent) + 1;
+  }
+});
