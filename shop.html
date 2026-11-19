@@ -38,7 +38,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="shop.html">Shop</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="Contact_Us.html">Contact Us</a>
                 </li>
@@ -73,8 +73,350 @@
         </div>
     </section>
 
+    <!-- filter and sort section -->
+<section class="container d-flex justify-content-between mb-4 gap-5">
+  <div class="d-flex gap-5">
+    <div>
+      <label for="category" class="fw-semibold fs-md fg-4 d-block mb-4">Categories</label>
+      <select name="category" id="category" class=" form-select filter-select border-1 border-gray rounded-5 shadow-none fs-md bg-transparent fg-black">
+        <option value="all">All</option>
+        <option value="hoodies">Jackets</option>
+        <option value="pants">Blazers</option>
+        <option value="pullovers">pullovers</option>
+    </select>
+  </div>
+    <div>
+      <label for="Prices" class="fw-semibold fs-md fg-4 d-block mb-4">Prices</label>
+      <select name="Prices" id="prices" class="form-select filter-select border-1 border-gray rounded-5 shadow-none fs-md bg-transparent fg-black">
+        <option value="all">All</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+      </select>
+    </div>
+      </div>
+
+  <div class="d-flex justify-content-center gap-5">
+  <select id="sort" class="form-select border-0  shadow-none fs-lg bg-transparent fg-black">
+    <option value="default">Sort</option>
+    <option value="atoz">A to Z</option>
+    <option value="ztoa">Z to A</option>
+  </select>
+  <button type="button" class="btn p-1 bg-transparent border-0 fg-4 fs-lg"><i class="fa-solid fa-table-cells"></i></button>
+  <button type="button" class="btn p-1 bg-transparent border-0 fg-4 fs-lg"><i class="fa-solid fa-table-cells-large"></i></button>
+  <button type="button" class="btn p-1 bg-transparent border-0 fg-4 fs-lg"><i class="fa-solid fa-table-columns"></i></button>
+    </div>
+</section>
+
+<!-- product-cards -->
+<div id="productLayout" class="row mb-5 mt-12 w-100">
+  <!-- card-1 -->
+  <div class="col-6 mt-9" data-index="1" data-cat="Jackets" data-price="17.99" data-name="Brown-Jacket">
+    <div class="d-flex gap-5 mb-8">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <div class=" position-relative bottom-50 translate-middle">
+          <div class="position-absolute z-1">
+          <span class="d-block py-2 px-1 fs-md fw-semibold rounded-5 fg-black bg-inverse">New</span>
+          <span class="d-block py-2 px-1 fs-md fw-semibold rounded-5 fg-white bg-success">-50%</span>
+          </div>
+        </div>
+        <img src="assets/WhatsApp Image 2026-11-19 at 7.04.45 PM.jpeg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Brown Men Jacket</h3>
+        <div class="fg-black">$17.99 <span class="ms-5 text-decoration-line-through fg-3">$13.00</span></div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- card-2 -->
+  <div class="col-6 mt-9" data-index="2" data-cat="Blazers" data-price="10.45" data-name="Red-Blazer">
+    <div class="d-flex gap-3 ">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <div class=" position-relative bottom-50 translate-middle">
+          <div class="position-absolute z-1">
+          <span class="d-block py-2 px-1 fs-md fw-semibold rounded-5 fg-black bg-inverse">New</span>
+          </div>
+        </div>
+        <img src="assets/5db6bd4769476c48d20dd80b2dc5a53b.jpg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Red Fitted Blazer</h3>
+        <div class="fg-black">$10.45</div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- card-3 -->
+  <div class="col-6 mt-9" data-index="3" data-cat="Blazers" data-price="40.5" data-name="Black-Blazer">
+    <div class="d-flex gap-3 ">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <img src="assets/4c0130ef5f3cac44065ddede7e0f1be4.jpg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Black Fitted Blazer</h3>
+        <div class="fg-black">$40.5</div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- card-4 -->
+  <div class="col-6 mt-9" data-index="4" data-cat="Jackets" data-price="20.1" data-name="NavyBlue-Jacket">
+    <div class="d-flex gap-3 ">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <div class=" position-relative bottom-50 translate-middle">
+          <div class="position-absolute z-1">
+          <span class="d-block py-2 px-1 fs-md fw-semibold rounded-5 fg-black bg-inverse">New</span>
+          </div>
+        </div>
+        <img src="assets/WhatsApp Image 2026-11-19 at 7.04.45 PM (1).jpeg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Navy Blue Men Jacket</h3>
+        <div class="fg-black">$20.1</div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- card-5 -->
+  <div class="col-6 mt-9" data-index="4" data-cat="Jackets" data-price="22.5" data-name="Burgundy-Jacket">
+    <div class="d-flex gap-3 ">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <div class=" position-relative bottom-50 translate-middle">
+          <div class="position-absolute z-1">
+          <span class="d-block py-2 px-1 fs-md fw-semibold rounded-5 fg-black bg-inverse">New</span>
+          </div>
+        </div>
+        <img src="assets/WhatsApp Image 2026-11-19 at 7.30.57 PM.jpeg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Burgundy Woman Jacket</h3>
+        <div class="fg-black">$22.5</div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- card-6 -->
+  <div class="col-6 mt-9" data-index="4" data-cat="Pullovers" data-price="11.9" data-name="NavyBlue-Pullover">
+    <div class="d-flex gap-3 ">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <div class=" position-relative bottom-50 translate-middle"></div>
+        <img src="assets/WhatsApp Image 2026-11-19 at 7.30.58 PM (1).jpeg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Navy Blue Pullover</h3>
+        <div class="fg-black">$11.9</div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- card-7 -->
+  <div class="col-6 mt-9" data-index="4" data-cat="Pullovers" data-price="12.3" data-name="Colorful-Pullover">
+    <div class="d-flex gap-3 ">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <div class=" position-relative bottom-50 translate-middle">
+          <div class="position-absolute z-1">
+          <span class="d-block py-2 px-1 fs-md fw-semibold rounded-5 fg-black bg-inverse">New</span>
+          </div>
+        </div>
+        <img src="assets/WhatsApp Image 2026-11-19 at 7.30.58 PM (2).jpeg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Colorful Trendy Pullover</h3>
+        <div class="fg-black">$12.3</div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+  <!-- card-4 -->
+  <div class="col-6 mt-9" data-index="4" data-cat="Pullovers" data-price="25.3" data-name="Brown-Pullover">
+    <div class="d-flex gap-3 ">
+      <div class="position-relative d-flex align-items-center justify-content-center p-2 img-wrap">
+        <div class=" position-relative bottom-50 translate-middle">
+        </div>
+        <img src="assets/WhatsApp Image 2026-11-19 at 7.30.58 PM.jpeg" alt="" class=" object-fit-contain rounded-5">
+      </div>
+      <div class="product-info">
+        <div class="fg-black mb-3">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3 class="fg-black fw-semibold">Navy Blue Men Jacket</h3>
+        <div class="fg-black">$25.3</div>
+        <p class="fg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, assumenda Lorem ipsum dolor sit amet.</p>
+        <button type="button" class="btn btn-cart w-100 mt-auto">Add to Cart</button>
+        <button type="button" class="btn wishlist-btn mt-1 w-100 fg-black bg-white"><i class="fa-regular fa-heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center my-5">
+  <button type="button"  class="btn rounded-pill px-5 ">Show More</button>
+</div>
+
+
+<!-- footer -->
+    <section class="join text-center">
+      <div class="details position-relative w-50 m-auto">
+        <h3 class="fs-3xl fg-black">Join Our Newsletter</h3>
+        <p class="fs-lg">Sign up for deals, new products and promotions</p>
+        <form action="" class="position-relative text-center m-auto w-fit">
+          <i class="fa-regular fa-envelope position-absolute fs-lg fg-gray"></i>
+          <input
+            type="email"
+            placeholder="Email address"
+            class="bg-transparent border-0 border-bottom"
+          />
+          <button class="btn position-absolute bg-transparent fg-gray w-fit">
+            Signup
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="bg-semiblack fg-white">
+      <div class="container p-12">
+        <div
+          class="d-flex justify-content-between align-items-center mb-12 align-items-center"
+        >
+          <div class="title">
+            <h3 class="border-end w-fit pe-8 border-5 d-inline-block fs-2xl">
+              VisioCreate
+            </h3>
+            <p class="fg-gray d-inline-block ps-8 fs-lg">
+              Gift & Decoration Store
+            </p>
+          </div>
+          <ul class="d-flex gap-12">
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Shop</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Product</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="copyright d-flex justify-content-between align-items-center border-top border-2 pt-6 pb-6 fs-lg"
+        >
+          <div class="d-flex align-items-center">
+            <p class="me-12 fg-gray mb-0">
+              Copyright &copy; 2023 VisioCreate. All rights reserved
+            </p>
+            <a href="#" class="fg-white fw-bold text-decoration-none me-12"
+              >Privacy Policy</a
+            >
+            <a href="#" class="fg-white fw-bold text-decoration-none"
+              >Terms of Use</a
+            >
+          </div>
+          <ul class="icons d-flex gap-6 mb-0 fs-xl">
+            <li>
+              <a href="#" class="fg-white"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="fg-white"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="fg-white">
+                <i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/Final_Project.js"></script>
+    <script src="js/arwa.js"></script>
 </body>
-
 </html>
