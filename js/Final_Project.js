@@ -91,7 +91,7 @@ owl.owlCarousel({
       items: 1.5,
     },
     600: {
-      items: 3,
+      items: 1.5,
     },
     1000: {
       items: 4.5,
@@ -121,5 +121,55 @@ document.addEventListener("click", function (e) {
   }
 });
 
+<<<<<<< HEAD
 // Filter + Sort
 
+=======
+// Counter Time Down
+
+const days = document.querySelector("#days");
+const hours = document.querySelector("#hours");
+const minutes = document.querySelector("#minutes");
+const seconds = document.querySelector("#seconds");
+
+let d = Number(days.innerHTML);
+let h = Number(hours.innerHTML);
+let m = Number(minutes.innerHTML);
+let s = Number(seconds.innerHTML);
+if (days)
+  function countdown() {
+    if (d === 0 && h === 0 && m === 0 && s === 0) {
+      return;
+    }
+
+    if (s > 0) {
+      s--;
+    } else {
+      s = 59;
+
+      if (m > 0) {
+        m--;
+      } else {
+        m = 59;
+
+        if (h > 0) {
+          h--;
+        } else {
+          h = 23;
+          d--;
+        }
+      }
+    }
+
+    days.innerHTML = d;
+    hours.innerHTML = h;
+    minutes.innerHTML = m;
+    seconds.innerHTML = s;
+
+    setTimeout(() => {
+      countdown();
+    }, 1000);
+  }
+
+countdown();
+>>>>>>> 0b1b44104c8ff296a8d2560f996aa0d8d5682e01
