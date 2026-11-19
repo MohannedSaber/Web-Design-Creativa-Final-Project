@@ -1,4 +1,5 @@
 @media (max-width: 767px) {
+  /* Start Product Page */
   .alert {
     margin: 0;
   }
@@ -110,4 +111,76 @@
   .product-footer .copyright .links {
     margin: 5% 0;
   }
+  /* End Product Page  */
+
+  /* Start Contact Us Page */
+  .contact-container {
+    padding: 3% 8%;
+  }
+  .contact-heading,
+  .contact-par {
+    width: 100%;
+  }
+  .contact-heading {
+    font-size: 35px;
+  }
+  .contact-par {
+    font-size: 18px;
+  }
+  .about_us .row .left_part,
+  .about_us .row .right_part {
+    width: 100%;
+  }
+  .about_us .row .left_part {
+    height: 350px;
+  }
+  .about_us .row .right_part {
+    padding: 20% 10%;
+  }
+  .about_us .row .right_part p {
+    font-size: 15px;
+    margin-bottom: 1%;
+  }
+  .about_us .row .right_part > a {
+    display: block;
+    margin-top: 15%;
+  }
+  .contact-us .cards {
+    flex-direction: column;
+  }
+  .contact-us .cards .card {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .form_map .row {
+    flex-direction: column-reverse;
+  }
+  .form_map .row .form,
+  .form_map .row .map {
+    width: 100%;
+    padding: 0 5%;
+  }
+  .form_map .row .form form {
+    margin-top: 5%;
+  }
+  .form_map .row .form form textarea {
+    width: 100%;
+  }
+  .form_map .row .form form button {
+    font-size: 18px;
+    padding: 4% 15%;
+    margin: auto;
+  }
+  .form_map .row .map > iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .support .part {
+    width: 47%;
+  }
+  .support .part:nth-child(1),
+  .support .part:nth-child(2) {
+    margin-bottom: 20%;
+  }
+  /* End Contact Us Page */
 }
