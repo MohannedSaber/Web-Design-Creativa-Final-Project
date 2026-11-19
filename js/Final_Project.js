@@ -1,3 +1,4 @@
+
 // show or hide password
 const password = document.getElementById("password");
 const passwordIcon = document.getElementById("password-icon");
@@ -119,3 +120,6 @@ document.addEventListener("click", function (e) {
     cartBtn.textContent = Number(cartBtn.textContent) + 1;
   }
 });
+
+// Filter + Sort
+

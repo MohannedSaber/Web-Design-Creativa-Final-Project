@@ -47,6 +47,20 @@
   min-height: 400px;
 }
 
+.filter-select{
+  min-width: 180px;
+}
+
+.img-wrap{
+  min-height: 250px;
+  flex: 0 0 50%;
+}
+.img-wrap img{
+  max-width: 100%;
+  max-height: 200px;
+}
+
+
 
 
 
