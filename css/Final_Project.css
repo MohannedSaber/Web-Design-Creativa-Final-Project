@@ -330,3 +330,32 @@ del {
 /* End Contact Us Page
 
 
+/* blog page */
+
+a{color: inherit;
+text-decoration: none;}
+
+ul{list-style: none;}
+
+
+
+.custom-bg{background-image: url(../assets/aaecbb349c10303473248e39b7644bc5.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
+border-radius: 20px;
+line-height: 4;
+padding: 10%;}
+
+.div-width{width: 90%;}
+.img-width{width: 100%;}
+
+.btn-style{border: none;
+background-color: transparent;
+color: darkgrey;}
+
+
+.bg-img{background-image:url(../assets/1fad045c1c45a20d731a3d1b79754b62.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+line-height: 2;
+padding: 10%;}
