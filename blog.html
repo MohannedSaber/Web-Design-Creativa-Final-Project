@@ -5,28 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog & Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/Final_Project.css" />
+    <link rel="stylesheet" href="css/Final_Project_Responsive.css" />
 </head>
 
 <body>
     <div class="text-capitalize">
         <!-- nav -->
-        <nav class="container">
-            <div class=" justify-content-between d-flex    bg-white fg-black ">
-                <h1 class=" w-25  px-5 fs-xl text py-3  ">VisioCreate.</h1>
+        <nav class="container navbar-content">
+            <div
+                class="justify-content-between d-flex gap-3 px-1 bg-white fg-black position-relative align-items-center">
+                <h1 class="heading w-25 fs-xl text ps-12 ms-12">VisioCreate.</h1>
 
-                <ul class="justify-content-start d-flex gap-12 align-items-center my-5 w-50 ps-12">
-
-                    <li class="nav-item  ">
-                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                <ul class="justify-content-start d-flex gap-12 align-items-center my-5 w-50 ps-12 lists-bigscreen">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop</a>
@@ -38,32 +43,66 @@
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
                 </ul>
+                <nav class="navbar menu-mobile lg:navbar-expand bg-1 fg-2 position-absolute start-0 d-none">
+                    <button class="product btn-icon navbar-toggler fg-black" type="button" data-bs-toggle="drawer"
+                        data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                    </button>
+                    <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavMenu"
+                        aria-labelledby="navbarNavMenuLabel">
+                        <div class="drawer-header">
+                            <h5 class="drawer-title" id="navbarNavMenuLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="drawer"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="drawer-body">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Product</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </dialog>
+                </nav>
 
-                <div class=" d-flex  justify-content-end align-items-center  px-12    ">
-                    <button type="button" class="border-0 bg-transparent " aria-label="#"><i
-                            class="fa-solid fa-magnifying-glass fg-black "></i></button>
-                    <button type="button" class="border-0 bg-transparent " aria-label="#"><i
-                            class="fa-regular fa-circle-user fg-black "></i></button>
-                    <button type="button" class="border-0 bg-transparent " aria-label="#"><i
-                            class="fa-solid fa-box fg-black"></i></button>
-                    <button type="button" class="border-0 bg-black rounded-pill h-50   cart-btn  "
-                        aria-label="#">0</button>
-
+                <div class="d-flex justify-content-end align-items-center px-12 navbar-icons">
+                    <button type="button" class="border-0 bg-transparent search-button" aria-label="#">
+                        <i class="fa-solid fa-magnifying-glass fg-black"></i>
+                    </button>
+                    <button type="button" class="border-0 bg-transparent account-button" aria-label="#">
+                        <i class="fa-regular fa-circle-user fg-black"></i>
+                    </button>
+                    <button type="button" class="border-0 bg-transparent cart-button" aria-label="#">
+                        <i class="fa-solid fa-box fg-black"></i>
+                    </button>
+                    <button type="button" class="border-0 bg-black rounded-pill h-50 cart-btn fg-white" aria-label="#">
+                        0
+                    </button>
                 </div>
             </div>
         </nav>
         <!-- banner -->
         <section class="container">
             <div class="custom-bg text-center">
-                <div class="fs-sm">
-                    <div class="m-auto d-flex justify-content-between w-6">
+                
+                    <div class="m-auto d-flex justify-content-between w-12 fs-xl ">
                         <a href="home">home <i class="fa-solid fa-chevron-right"></i></a>
                         <a href="blog">blog</a>
                     </div>
 
                     <h1>our blog</h1>
-                    <p class="fs-md">home ideas ans design inspiration</p>
-                </div>
+                    <p class="fs-lg">home ideas ans design inspiration</p>
+                
 
 
             </div>
@@ -96,7 +135,7 @@
 
         <!-- cards -->
         <section class="container">
-            <div class="row justify-content-center m-auto">
+            <div class="row justify-content-center m-auto mb-12 ">
                 <div class="col-4">
                     <div class="div-width">
                         <img class="rounded mx-auto img-width" src="assets/66701007bf192e3a4aea99e125470e40.jpg"
@@ -125,7 +164,7 @@
 
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-12">
                 <div class="col-4">
                     <div class="div-width">
                         <img class="rounded mx-auto img-width" src="assets/1c338700e467ae66207965029891f9e7.jpg"
@@ -187,26 +226,90 @@
 
         </section>
 
-        <section>
-            <div class="bg-img position-relative">
-                <div class="text-center">
-                    <h2>join our newsettler</h2>
-                    <p fs-md>sign up for more deals, new products and promotions</p>
-                </div>
-                <form action="" class="position-absolute top-150 start-50 translate-middle">
-                    <i class="fa-regular fa-envelope fs-lg fg-gray"></i>
-                    <input type="email" placeholder="email address">
-                    <button>sign up</button>
+
+        <section class="join text-center">
+            <div class="details position-relative w-50 m-auto">
+                <h3 class="fs-3xl">Join Our Newsletter</h3>
+                <p class="fs-lg">Sign up for deals, new products and promotions</p>
+                <form action="" class="position-relative text-center m-auto w-fit">
+                    <i class="fa-regular fa-envelope position-absolute fs-lg fg-gray"></i>
+                    <input type="email" placeholder="Email address" class="bg-transparent border-0 border-bottom" />
+                    <button class="btn position-absolute bg-transparent fg-gray w-fit">
+                        Signup
+                    </button>
                 </form>
             </div>
-
         </section>
+        <footer class="product-footer bg-semiblack fg-white">
+            <div class="container p-12">
+                <div class="heading d-flex justify-content-between align-items-center mb-12 align-items-center">
+                    <div class="title">
+                        <h3 class="border-end w-fit pe-8 border-5 d-inline-block fs-2xl">
+                            VisioCreate
+                        </h3>
+                        <hr class="w-25 m-auto mt-3 mb-4 border-4 d-none" />
+                        <p class="fg-gray d-inline-block ps-8 fs-lg">
+                            Gift & Decoration Store
+                        </p>
+                    </div>
+                    <ul class="d-flex gap-12">
+                        <li>
+                            <a href="#" class="text-decoration-none fg-gray fs-lg">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none fg-gray fs-lg">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none fg-gray fs-lg">Product</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none fg-gray fs-lg">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none fg-gray fs-lg">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="copyright d-flex justify-content-between align-items-center border-top border-2 pt-6 pb-6 fs-lg">
+                    <div class="d-flex align-items-center">
+                        <p class="me-12 fg-gray mb-0">
+                            Copyright &copy ; 2023 VisioCreate. All rights reserved
+                        </p>
+                        <div class="links">
+                            <a href="#" class="fg-white fw-bold text-decoration-none me-12">Privacy Policy</a>
+                            <a href="#" class="fg-white fw-bold text-decoration-none">Terms of Use</a>
+                        </div>
+                    </div>
+                    <ul class="icons d-flex gap-6 mb-0 fs-xl">
+                        <li>
+                            <a href="#" class="fg-white"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fg-white"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fg-white">
+                                <i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
     </div>
 
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Final_Project.js"></script>
 
 
 </body>
