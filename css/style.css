@@ -18,3 +18,10 @@ padding: 10%;}
 .btn-style{border: none;
 background-color: transparent;
 color: darkgrey;}
+
+
+.bg-img{background-image:url(../assets/1fad045c1c45a20d731a3d1b79754b62.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+line-height: 2;
+padding: 10%;}
