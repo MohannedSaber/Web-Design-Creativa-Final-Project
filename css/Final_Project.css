@@ -42,7 +42,6 @@ header {
 }
 .img {
   background-image: url(/assets/image_no_text.png);
-  /* background-position: right; */
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -100,6 +99,19 @@ del {
 .fg-blue {
   color: #3b82f6;
 }
+.nav-owl{
+    top: -10%;
+  position: absolute;
+  right: 0;
+  
+}
+.owl-prev span{
+  font-size: 50px;
+}
+.owl-next span{
+  font-size: 50px;
+}
+
 
 /* Start Product Page */
 

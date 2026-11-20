@@ -77,10 +77,11 @@ if (wishlist)
     heart.classList.toggle("fa-solid");
   });
 
-var owl = $(".owl-carousel");
+var owl = $("#two");
 owl.owlCarousel({
   items: 4.5,
   loop: true,
+  dots: true,
   margin: 10,
   autoplay: true,
   autoplayTimeout: 1000,
@@ -88,6 +89,8 @@ owl.owlCarousel({
   responsive: {
     0: {
       items: 1.5,
+      nav: true,
+      dots:true
     },
     600: {
       items: 3,
@@ -97,7 +100,28 @@ owl.owlCarousel({
     },
   },
 });
-
+var owl1 = $("#one");
+owl1.owlCarousel({
+  items: 4.5,
+  loop: true,
+  dots: false,
+  margin: 1,
+  autoplay: true,
+  autoplayTimeout: 1000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1.5,
+      nav: true,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 4.5,
+    },
+  },
+});
 // ======================================================
 
 let wishes = document.querySelectorAll(".wish");
