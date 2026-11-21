@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/Final_Project.css" />
+    <link rel="stylesheet" href="css/Final_Project_Responsive.css" />
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="container navbar-content">
+        <div class="justify-content-between d-flex gap-3 px-1 bg-white fg-black position-relative align-items-center">
+            <h1 class="heading w-25 fs-xl text ps-12 ms-12">VisioCreate.</h1>
+
+            <ul class="justify-content-start d-flex gap-12 align-items-center my-5 w-50 ps-12 lists-bigscreen">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <nav class="navbar menu-mobile lg:navbar-expand bg-1 fg-2 position-absolute start-0 d-none">
+                <button class="product btn-icon navbar-toggler fg-black" type="button" data-bs-toggle="drawer"
+                    data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+                <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavMenu" aria-labelledby="navbarNavMenuLabel">
+                    <div class="drawer-header">
+                        <h5 class="drawer-title" id="navbarNavMenuLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                    </div>
+                    <div class="drawer-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </dialog>
+            </nav>
+
+            <div class="d-flex justify-content-end align-items-center px-12 navbar-icons">
+                <button type="button" class="border-0 bg-transparent search-button" aria-label="#">
+                    <i class="fa-solid fa-magnifying-glass fg-black"></i>
+                </button>
+                <button type="button" class="border-0 bg-transparent account-button" aria-label="#">
+                    <i class="fa-regular fa-circle-user fg-black"></i>
+                </button>
+                <button type="button" class="border-0 bg-transparent cart-button" aria-label="#">
+                    <i class="fa-solid fa-box fg-black"></i>
+                </button>
+                <button type="button" class="border-0 bg-black rounded-pill h-50 cart-btn fg-white" aria-label="#">
+                    0
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container text-capitalize">
+
+            <div class="text-center mt-7">
+
+                <h1 class="mb-4">cart</h1>
+                <div class="row justify-content-center">
+                    <div class="d-flex align-content-start col-3">
+                        <P class="no-style me-4">1</P>
+                        <h4> shipping cart</h4>
+                    </div>
+                    <div class="d-flex align-content-start col-3">
+                        <P class="no-style me-4">2</P>
+                        <h4>checkout details</h4>
+                    </div>
+                    <div class="d-flex align-content-start col-3">
+                        <P class="no-style me-4">3</P>
+                        <h4>order complete </h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-10">
+
+                <!-- PRODUCTS -->
+                <div class="col-7">
+
+                    <div class="row border-bottom mb-4 pb-3">
+
+                        <div class="col-5">
+                            <p>Products</p>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <p>Quantity</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>Price</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>Subtotal</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 1 -->
+                    <div class="row border-bottom mb-4 pb-4 align-items-center" id="product1">
+
+                        <div class="col-5">
+                            <div class="d-flex gap-2 align-items-center">
+
+                                <img class="custom-product" src="assets/04-model-wearing-hoodie.jpg" alt="Black hoodie">
+
+                                <div>
+                                    <h6>Black Hoodie</h6>
+                                    <p>Color: Black</p>
+
+                                    <button class="remove-btn" onclick="removeProduct('product1', 'subtotal1')">
+
+                                        <i class="fa-solid fa-xmark"></i>
+
+                                        Remove
+
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="row align-items-center text-center">
+
+
+
+                                <div class="col-4">
+                                    <div class="quantity-box border border-2 w-5">
+
+
+                                        <button onclick="changeQuantity('num1', 39, 'subtotal1', -1)">−</button>
+
+                                        <span id="num1">1</span>
+
+                                        <button onclick="changeQuantity('num1', 39, 'subtotal1', 1)">+</button>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <p>$39.00</p>
+                                </div>
+
+                                <div class="col-4">
+                                    <p id="subtotal1">$39.00</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- PRODUCT 2 -->
+                    <div class="row border-bottom mb-4 pb-4 align-items-center" id="product2">
+
+                        <div class="col-5">
+                            <div class="d-flex gap-2 align-items-center">
+
+                                <img class="custom-product" src="assets/09-black-hoodie.jpg" alt="Black hoodie">
+
+                                <div>
+                                    <h6>Black Hoodie</h6>
+                                    <p>Color: Black</p>
+                                    <button class="remove-btn" onclick="removeProduct('product2', 'subtotal2')">
+
+                                        <i class="fa-solid fa-xmark"></i>
+
+                                        Remove
+
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="row align-items-center text-center">
+
+                                <div class="col-4">
+                                    <div class="quantity-box border border-2 w-5">
+
+
+                                        <button onclick="changeQuantity('num2', 19, 'subtotal2', -1)">−</button>
+
+                                        <span id="num2">2</span>
+
+                                        <button onclick="changeQuantity('num2', 19, 'subtotal2', 1)">+</button>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <p>$19.00</p>
+                                </div>
+
+                                <div class="col-4">
+                                    <p id="subtotal2">$38.00</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 3 -->
+                    <div class="row border-bottom mb-4 pb-4 align-items-center" id="product3">
+
+                        <div class="col-5">
+                            <div class="d-flex gap-2 align-items-center">
+
+                                <img class="custom-product" src="assets/01_black_tshirt.jpg" alt="Black t-shirt">
+
+                                <div>
+                                    <h6>Black T-Shirt</h6>
+                                    <p>Color: Black</p>
+
+                                    <button class="remove-btn" onclick="removeProduct('product3', 'subtotal3')">
+
+                                        <i class="fa-solid fa-xmark"></i>
+
+                                        Remove
+
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="row align-items-center text-center">
+
+                                <div class="col-4">
+                                    <div class="quantity-box border border-2 w-5">
+
+
+                                        <button onclick="changeQuantity('num3', 39, 'subtotal3', -1)">−</button>
+
+                                        <span id="num3">1</span>
+
+                                        <button onclick="changeQuantity('num3', 39, 'subtotal3', 1)">+</button>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <p>$39.00</p>
+                                </div>
+
+                                <div class="col-4">
+                                    <p id="subtotal3">$39.00</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+                <!-- RIGHT SIDE-->
+                <div class="col-4">
+
+                    <div class="border rounded p-4">
+
+                        <h4 class="mb-4">cart Summary</h4>
+
+
+                        <div class="border rounded p-3 mb-3">
+
+                            <label class="d-flex justify-content-between">
+                                <span>
+                                    <input type="radio" name="shipping" checked onclick="shippingCost(0)">
+
+                                    Free shipping
+                                </span>
+                                <span>$0.00</span>
+                            </label>
+
+                        </div>
+
+                        <div class="border rounded p-3 mb-1">
+
+                            <label class="d-flex justify-content-between">
+                                <span>
+                                    <input type="radio" name="shipping" onclick="shippingCost(15)">
+
+                                    Express shipping
+                                </span>
+                                <span>+$15.00</span>
+                            </label>
+
+                        </div>
+
+                        <div class="border rounded p-3 mb-4">
+
+                            <label class="d-flex justify-content-between">
+                                <span>
+                                    <input type="radio" name="shipping" onclick="shippingCost(21)">
+
+                                    Pick Up
+                                </span>
+                                <span>$21.00</span>
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>subtotal</span>
+                            <span id="cartSubtotal">$115.00</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>total quantity</span>
+                            <span id="totalQuantity">4</span>
+                        </div>
+
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>discount</span>
+                            <span id="discountValue">$0.00</span>
+                        </div>
+
+                        <hr>
+
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <h5>total</h5>
+                            <h5 id="total">$115.00</h5>
+                        </div>
+
+                        <button class="btn fg-white w-100 bg-black">
+                            Checkout
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        </div>
+        <div class="ms-12 mb-12 mt-6">
+
+            <h4>have a coupon?</h4>
+            <p class="fg-gray">add you code for an instant cart discount</p>
+            <div class="d-flex  ">
+                <i class="fa-solid fa-ticket mt-3 fg-gray"></i>
+                <input type="text" id="couponInput" placeholder="Coupon code">
+
+                <button type="button" id="apply">
+                    Apply
+                </button>
+
+                <p id="couponMessage"></p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <footer class="product-footer bg-semiblack fg-white">
+        <div class="container p-12">
+            <div class="heading d-flex justify-content-between align-items-center mb-12 align-items-center">
+                <div class="title">
+                    <h3 class="border-end w-fit pe-8 border-5 d-inline-block fs-2xl">
+                        VisioCreate
+                    </h3>
+                    <hr class="w-25 m-auto mt-3 mb-4 border-4 d-none" />
+                    <p class="fg-gray d-inline-block ps-8 fs-lg">
+                        Gift & Decoration Store
+                    </p>
+                </div>
+                <ul class="d-flex gap-12">
+                    <li>
+                        <a href="#" class="text-decoration-none fg-gray fs-lg">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none fg-gray fs-lg">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none fg-gray fs-lg">Product</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none fg-gray fs-lg">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none fg-gray fs-lg">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="copyright d-flex justify-content-between align-items-center border-top border-2 pt-6 pb-6 fs-lg">
+                <div class="d-flex align-items-center">
+                    <p class="me-12 fg-gray mb-0">
+                        Copyright &copy ; 2023 VisioCreate. All rights reserved
+                    </p>
+                    <div class="links">
+                        <a href="#" class="fg-white fw-bold text-decoration-none me-12">Privacy Policy</a>
+                        <a href="#" class="fg-white fw-bold text-decoration-none">Terms of Use</a>
+                    </div>
+                </div>
+                <ul class="icons d-flex gap-6 mb-0 fs-xl">
+                    <li>
+                        <a href="#" class="fg-white"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fg-white"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fg-white">
+                            <i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/Final_Project.js"></script>
+</body>
+
+</html>

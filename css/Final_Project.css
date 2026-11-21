@@ -359,3 +359,32 @@ background-repeat: no-repeat;
 background-size: 100%;
 line-height: 2;
 padding: 10%;}
+/* blog page */
+
+
+/* cart page */
+.no-style{border-radius: 50%;
+width: 26pX;
+height: 26PX;
+background-color: black;
+color: white;}
+
+.custom-product{width: 35%;}
+
+.remove-btn{background-color: transparent;
+border: none;}
+
+.coupon-btn{background-color: transparent;
+color: black;
+border: none;}
+
+
+.calc-button{background-color: transparent;
+border: none;}
+
+
+/* cart */
+/* details */
+.img-details{width: 95%;}
+
+.model-img{width: 100%;}

@@ -173,3 +173,113 @@ if (days)
 
 countdown();
 >>>>>>> 0b1b44104c8ff296a8d2560f996aa0d8d5682e01
+
+
+
+
+// cart:
+
+
+
+let s1 = 39,
+    s2 = 38,
+    s3 = 39;
+
+let shipping = 0,
+    discount = 0;
+
+const log = console.log;
+
+const calcTotal = () => {
+    let all = s1 + s2 + s3;
+    let discountAmount = (all * discount) / 100;
+    let finalPrice = all + shipping - discountAmount;
+
+    document.querySelector("#cartSubtotal").textContent = "$" + all.toFixed(2);
+    document.querySelector("#discountValue").textContent = "$" + discountAmount.toFixed(2);
+    document.querySelector("#total").textContent = "$" + finalPrice.toFixed(2);
+
+    let q1 = +document.querySelector("#num1").textContent;
+    let q2 = +document.querySelector("#num2").textContent;
+    let q3 = +document.querySelector("#num3").textContent;
+    let totalQty = q1 + q2 + q3;
+
+    if (document.querySelector("#totalQuantity")) {
+        document.querySelector("#totalQuantity").textContent = totalQty;
+    }
+    if (document.querySelector(".cart-btn")) {
+        document.querySelector(".cart-btn").textContent = totalQty;
+    }
+};
+
+function changeQuantity(numId, price, subtotalId, change) {
+    let num = document.querySelector("#" + numId);
+    let x = +num.textContent;
+    x = x + change;
+
+    if (x < 1) {
+        alert("Minimum quantity is 1");
+    } else {
+        num.textContent = x;
+        let subtotal = price * x;
+        document.querySelector("#" + subtotalId).textContent = "$" + subtotal.toFixed(2);
+
+        switch (subtotalId) {
+            case "subtotal1":
+                s1 = subtotal;
+                break;
+            case "subtotal2":
+                s2 = subtotal;
+                break;
+            default:
+                s3 = subtotal;
+        }
+
+        calcTotal();
+    }
+}
+
+function removeProduct(productId, subtotalId) {
+    document.querySelector("#" + productId).style.display = "none";
+    document.querySelector("#" + subtotalId).textContent = "$0.00";
+
+    if (subtotalId == "subtotal1") {
+        s1 = 0;
+        document.querySelector("#num1").textContent = 0;
+    } else if (subtotalId == "subtotal2") {
+        s2 = 0;
+        document.querySelector("#num2").textContent = 0;
+    } else {
+        s3 = 0;
+        document.querySelector("#num3").textContent = 0;
+    }
+
+    calcTotal();
+}
+
+function shippingCost(price) {
+    shipping = price;
+    calcTotal();
+}
+
+const applyCouponBtn = document.querySelector("#applyCouponBtn");
+if (applyCouponBtn) {
+    applyCouponBtn.addEventListener("click", function () {
+        let code = document.querySelector("#couponInput").value;
+        let msg = document.querySelector("#couponMessage");
+
+        if (code == "SAVE10") {
+            discount = 10;
+            msg.textContent = "Coupon applied successfully";
+            msg.style.color = "green";
+        } else {
+            discount = 0;
+            msg.textContent = "Invalid coupon code";
+            msg.style.color = "red";
+        }
+
+        calcTotal();
+    });
+}
+
+calcTotal();
