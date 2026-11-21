@@ -121,11 +121,8 @@ document.addEventListener("click", function (e) {
   }
 });
 
-<<<<<<< HEAD
-// Filter + Sort
 
-=======
-// Counter Time Down
+
 
 const days = document.querySelector("#days");
 const hours = document.querySelector("#hours");
@@ -172,7 +169,6 @@ if (days)
   }
 
 countdown();
->>>>>>> 0b1b44104c8ff296a8d2560f996aa0d8d5682e01
 
 
 

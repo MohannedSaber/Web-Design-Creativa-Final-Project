@@ -174,11 +174,11 @@
                                     <div class="quantity-box border border-2 w-5">
 
 
-                                        <button onclick="changeQuantity('num1', 39, 'subtotal1', -1)">−</button>
+                                        <button class="border-0 bg-transparent" onclick="changeQuantity('num1', 39, 'subtotal1', -1)">−</button>
 
                                         <span id="num1">1</span>
 
-                                        <button onclick="changeQuantity('num1', 39, 'subtotal1', 1)">+</button>
+                                        <button class="border-0 bg-transparent" onclick="changeQuantity('num1', 39, 'subtotal1', 1)">+</button>
 
 
                                     </div>
@@ -228,11 +228,11 @@
                                     <div class="quantity-box border border-2 w-5">
 
 
-                                        <button onclick="changeQuantity('num2', 19, 'subtotal2', -1)">−</button>
+                                        <button class="border-0 bg-transparent" onclick="changeQuantity('num2', 19, 'subtotal2', -1)">−</button>
 
                                         <span id="num2">2</span>
 
-                                        <button onclick="changeQuantity('num2', 19, 'subtotal2', 1)">+</button>
+                                        <button class="border-0 bg-transparent" onclick="changeQuantity('num2', 19, 'subtotal2', 1)">+</button>
 
 
                                     </div>
@@ -264,7 +264,7 @@
                                     <h6>Black T-Shirt</h6>
                                     <p>Color: Black</p>
 
-                                    <button class="remove-btn" onclick="removeProduct('product3', 'subtotal3')">
+                                    <button class="remove-btn " onclick="removeProduct('product3', 'subtotal3')">
 
                                         <i class="fa-solid fa-xmark"></i>
 
@@ -283,11 +283,11 @@
                                     <div class="quantity-box border border-2 w-5">
 
 
-                                        <button onclick="changeQuantity('num3', 39, 'subtotal3', -1)">−</button>
+                                        <button class="border-0 bg-transparent" onclick="changeQuantity('num3', 39, 'subtotal3', -1)">−</button>
 
                                         <span id="num3">1</span>
 
-                                        <button onclick="changeQuantity('num3', 39, 'subtotal3', 1)">+</button>
+                                        <button class="border-0 bg-transparent" onclick="changeQuantity('num3', 39, 'subtotal3', 1)">+</button>
 
 
                                     </div>
@@ -331,7 +331,7 @@
 
                         </div>
 
-                        <div class="border rounded p-3 mb-1">
+                        <div class="border-0 rounded p-3 mb-1">
 
                             <label class="d-flex justify-content-between">
                                 <span>
@@ -344,7 +344,7 @@
 
                         </div>
 
-                        <div class="border rounded p-3 mb-4">
+                        <div class="border-0 rounded p-3 mb-4">
 
                             <label class="d-flex justify-content-between">
                                 <span>
@@ -399,18 +399,19 @@
 
 
         </div>
-        <div class="ms-12 mb-12 mt-6">
+        <div class="ms-12 mb-12 mt-6 ">
 
             <h4>have a coupon?</h4>
             <p class="fg-gray">add you code for an instant cart discount</p>
             <div class="d-flex  ">
-                <i class="fa-solid fa-ticket mt-3 fg-gray"></i>
-                <input type="text" id="couponInput" placeholder="Coupon code">
-
-                <button type="button" id="apply">
+                
+                <div class="position-relative w-25">
+                <input class="w-100  " type="text" id="couponInput" placeholder="Coupon code">
+<i class="fa-solid fa-ticket mt-3 fg-gray"></i>
+                <button class="border-0 bg-transparent position-absolute end-0 pt-9 translate-middle " type="button" id="apply">
                     Apply
                 </button>
-
+</div>
                 <p id="couponMessage"></p>
             </div>
 
@@ -480,7 +481,108 @@
 
 
 
+    <script>let s1 = 39,
+            s2 = 38,
+            s3 = 39;
 
+        let shipping = 0,
+            discount = 0;
+
+        const log = console.log;
+
+        const calcTotal = () => {
+            let all = s1 + s2 + s3;
+            let discountAmount = (all * discount) / 100;
+            let finalPrice = all + shipping - discountAmount;
+
+            document.querySelector("#cartSubtotal").textContent = "$" + all.toFixed(2);
+            document.querySelector("#discountValue").textContent = "$" + discountAmount.toFixed(2);
+            document.querySelector("#total").textContent = "$" + finalPrice.toFixed(2);
+
+            let q1 = +document.querySelector("#num1").textContent;
+            let q2 = +document.querySelector("#num2").textContent;
+            let q3 = +document.querySelector("#num3").textContent;
+            let totalQty = q1 + q2 + q3;
+
+            if (document.querySelector("#totalQuantity")) {
+                document.querySelector("#totalQuantity").textContent = totalQty;
+            }
+            if (document.querySelector(".cart-btn")) {
+                document.querySelector(".cart-btn").textContent = totalQty;
+            }
+        };
+
+        function changeQuantity(numId, price, subtotalId, change) {
+            let num = document.querySelector("#" + numId);
+            let x = +num.textContent;
+            x = x + change;
+
+            if (x < 1) {
+                alert("Minimum quantity is 1");
+            } else {
+                num.textContent = x;
+                let subtotal = price * x;
+                document.querySelector("#" + subtotalId).textContent = "$" + subtotal.toFixed(2);
+
+                switch (subtotalId) {
+                    case "subtotal1":
+                        s1 = subtotal;
+                        break;
+                    case "subtotal2":
+                        s2 = subtotal;
+                        break;
+                    default:
+                        s3 = subtotal;
+                }
+
+                calcTotal();
+            }
+        }
+
+        function removeProduct(productId, subtotalId) {
+            document.querySelector("#" + productId).style.display = "none";
+            document.querySelector("#" + subtotalId).textContent = "$0.00";
+
+            if (subtotalId == "subtotal1") {
+                s1 = 0;
+                document.querySelector("#num1").textContent = 0;
+            } else if (subtotalId == "subtotal2") {
+                s2 = 0;
+                document.querySelector("#num2").textContent = 0;
+            } else {
+                s3 = 0;
+                document.querySelector("#num3").textContent = 0;
+            }
+
+            calcTotal();
+        }
+
+        function shippingCost(price) {
+            shipping = price;
+            calcTotal();
+        }
+
+        const applyCouponBtn = document.querySelector("#applyCouponBtn");
+        if (applyCouponBtn) {
+            applyCouponBtn.addEventListener("click", function () {
+                let code = document.querySelector("#couponInput").value;
+                let msg = document.querySelector("#couponMessage");
+
+                if (code == "SAVE10") {
+                    discount = 10;
+                    msg.textContent = "Coupon applied successfully";
+                    msg.style.color = "green";
+                } else {
+                    discount = 0;
+                    msg.textContent = "Invalid coupon code";
+                    msg.style.color = "red";
+                }
+
+                calcTotal();
+            });
+        }
+
+        calcTotal();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
