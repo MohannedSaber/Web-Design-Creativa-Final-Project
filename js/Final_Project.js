@@ -128,47 +128,49 @@ const days = document.querySelector("#days");
 const hours = document.querySelector("#hours");
 const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
+if(days){
 
-let d = Number(days.innerHTML);
-let h = Number(hours.innerHTML);
-let m = Number(minutes.innerHTML);
-let s = Number(seconds.innerHTML);
-if (days)
-  function countdown() {
-    if (d === 0 && h === 0 && m === 0 && s === 0) {
-      return;
-    }
-
-    if (s > 0) {
-      s--;
-    } else {
-      s = 59;
-
-      if (m > 0) {
-        m--;
+  let d = Number(days.innerHTML)  || 0;
+  let h = Number(hours.innerHTML) || 0;
+  let m = Number(minutes.innerHTML) || 0;
+  let s = Number(seconds.innerHTML) || 0;
+  if (days)
+    function countdown() {
+      if (d === 0 && h === 0 && m === 0 && s === 0) {
+        return;
+      }
+  
+      if (s > 0) {
+        s--;
       } else {
-        m = 59;
-
-        if (h > 0) {
-          h--;
+        s = 59;
+  
+        if (m > 0) {
+          m--;
         } else {
-          h = 23;
-          d--;
+          m = 59;
+  
+          if (h > 0) {
+            h--;
+          } else {
+            h = 23;
+            d--;
+          }
         }
       }
+  
+      days.innerHTML = d;
+      hours.innerHTML = h;
+      minutes.innerHTML = m;
+      seconds.innerHTML = s;
+  
+      setTimeout(() => {
+        countdown();
+      }, 1000);
     }
-
-    days.innerHTML = d;
-    hours.innerHTML = h;
-    minutes.innerHTML = m;
-    seconds.innerHTML = s;
-
-    setTimeout(() => {
-      countdown();
-    }, 1000);
-  }
-
-countdown();
+  
+  countdown();
+}
 
 
 
@@ -279,3 +281,5 @@ if (applyCouponBtn) {
 }
 
 calcTotal();
+
+
