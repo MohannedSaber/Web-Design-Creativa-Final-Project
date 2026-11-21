@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/Final_Project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/Final_Project_Responsive.css">
+  </head>
+  <body class="bg-white fg-black">
+      <header class="d-flex alert-product">
+      <div
+        class="alert theme-warning w-100 bg-transparent m-auto border-0 justify-content-center d-flex md:d-none time "
+        role="alert"
+      >
+        <h1 class="text-center text-sm text pb-2 fg-lightblack d-flex">
+          <i class="fa-solid fa-tags"></i>
+          <span class="px-2">30% off Storewide-Limited Time!</span>
+          <p>
+            <a
+              href="#"
+              class="border-bottom border-1 fg-blue text-decoration-none border-white text-decoration-underline"
+              >Shop Now<i
+                class="fa-solid fa-arrow-right-long text-decoration-underline"
+              ></i
+            ></a>
+          </p>
+        </h1>
+        <button
+          type="button"
+          class="border-0 ms-auto bg-transparent"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        >
+          <i class="fa-solid fa-xmark fg-gray"></i>
+        </button>
+      </div>
+    </header>
+
+    <nav class="navbar md:navbar-expand bg-white fg-black">
+      <div class="container">
+        <button
+          class="btn-icon navbar-toggler fg-black d-flex ms-12"
+          type="button"
+          data-bs-toggle="drawer"
+          data-bs-target="#navbarDrawer"
+          aria-controls="navbarDrawer"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <h1 class="w-25 mx-12 px-8 fs-xl text py-3 d-flex">VisioCreate.</h1>
+
+        <dialog
+          class="drawer drawer-end bg-white"
+          tabindex="-1"
+          id="navbarDrawer"
+          aria-labelledby="navbarDrawerLabel"
+        >
+          <div class="drawer-header fg-black">
+            <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="drawer"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="drawer-body mb-2 md:mb-0">
+            <ul class="nav navbar-nav me-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link fg-black"
+                  aria-current="#Home-section"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fg-black" href="#Shop-section">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fg-black" href="#Product-section">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fg-black" href="#Contact-section"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <a class="border-0 bg-transparent" href="#"
+              ><i class="fa-solid fa-magnifying-glass fg-black"></i
+            ></a>
+            <a class="border-0 bg-transparent" href="sign-in.html"
+              ><i class="fa-regular fa-circle-user fg-black"></i
+            ></a>
+          </div>
+        </dialog>
+        <a class="border-0 bg-transparent" href="#"
+          ><i class="fa-solid fa-box fg-black"></i
+        ></a>
+        <button
+          type="button"
+          class="border-0 bg-black rounded-pill h-50 cart-btn"
+          aria-label="#"
+        >
+          0
+        </button>
+      </div>
+    </nav>
+    <section class="container">
+      <div class="d-flex flex-column align-items-center gap-10 pb-12">
+        <h1 class="fg-black text-center">Check Out</h1>
+
+        <div
+          class="d-flex justify-content-center gap-5 md:gap-12 w-100 md:w-75"
+        >
+          <div
+            class="border-success border-bottom border-2 pe-0 md:pe-12 d-none md:d-flex align-items-center gap-5 fg-success py-2"
+          >
+            <span class="p-1 rounded-circle fg-white bg-success"
+              ><i class="fa-solid fa-check"></i
+            ></span>
+            <span class="d-flex">Shopping cart</span>
+          </div>
+
+          <div
+            class="border-black border-bottom border-2 pe-0 md:pe-12 d-flex align-items-center gap-5"
+          >
+            <span class="p-1 rounded-circle fg-white bg-black"
+              ><i class="fa-solid fa-2"></i
+            ></span>
+            <span class="d-flex">Checkout details</span>
+          </div>
+
+          <div class="d-flex align-items-center gap-7">
+            <span class="p-1 rounded-circle fg-white bg-muted-inverse"
+              ><i class="fa-solid fa-3"></i
+            ></span>
+            <p class="d-none md:d-flex fg-secondary pt-4">Order complete</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row d-flex gap-12 pb-12 ">
+        <div class="col-12 md:col-7">
+          <div class="row border p-4 md:p-7 fg-black">
+            <h3>Contact Infomation</h3>
+            <div class="col-6">
+              <label for="formGroupExampleInput">first name</label>
+              <input
+                type="text"
+                id="formGroupExampleInput"
+                class="form-control bg-transparent fg-black"
+                placeholder="First name"
+                aria-label="First name"
+              />
+            </div>
+            <div class="col-6">
+              <label for="formGroupExampleInput1">last name</label>
+              <input
+                type="text"
+                id="formGroupExampleInput1"
+                class="form-control bg-transparent fg-black"
+                placeholder="Last name"
+                aria-label="Last name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2">PHONE NUMBER</label>
+              <input
+                type="number"
+                class="form-control bg-transparent fg-black"
+                id="formGroupExampleInput3"
+                placeholder="PHONE NUMBER"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput4">EMAIL</label>
+              <input
+                type="email"
+                class="form-control bg-transparent fg-black"
+                id="formGroupExampleInput4"
+                placeholder="Your Email"
+              />
+            </div>
+          </div>
+
+          <div class="row border p-4 md:p-7 fg-black mt-5">
+            <h3>Shipping Address</h3>
+            <div class="mb-3">
+              <label for="formGroupExampleInput5">STREET Address*</label>
+              <input
+                type="text"
+                id="formGroupExampleInput5"
+                class="form-control bg-transparent fg-black"
+                placeholder="STREET Address"
+                aria-label="STREET Address"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="sizesSelectDefault">Country*</label>
+              <select
+                class="form-control bg-transparent fg-black"
+                id="sizesSelectDefault"
+              >
+                <option class="bg-white fg-black">Country</option>
+                <option class="bg-white fg-black" value="Giza">Giza</option>
+                <option class="bg-white fg-black" value="Cairo">Cairo</option>
+                <option class="bg-white fg-black" value="Alex">Alex</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput7">TOWN/CITY</label>
+              <input
+                type="text"
+                class="form-control bg-transparent fg-black"
+                id="formGroupExampleInput7"
+                placeholder="Town/City"
+              />
+            </div>
+            <div class="col-6">
+              <label for="formGroupExampleInput8">STATE</label>
+              <input
+                type="text"
+                id="formGroupExampleInput8"
+                class="form-control bg-transparent fg-black"
+                placeholder="State"
+                aria-label="State"
+              />
+            </div>
+            <div class="col-6">
+              <label for="formGroupExampleInput9">ZIP CODE</label>
+              <input
+                type="text"
+                id="formGroupExampleInput9"
+                class="form-control bg-transparent fg-black"
+                placeholder="ZIP Code"
+                aria-label="ZIP Code"
+              />
+            </div>
+            <div class="form-field mt-5">
+              <input
+                type="checkbox"
+                id="checkprimary"
+                class="check theme-primary"
+                checked
+              />
+              <label for="checkprimary"
+                >Use a different billing address (option)</label
+              >
+            </div>
+          </div>
+          <div class="row border p-4 md:p-7 fg-black mt-5">
+            <h3>Payment method</h3>
+            <div class="mb-3">
+              <label
+                class="border border-2 rounded-4 p-3 d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-5">
+                  <input type="radio" name="pay" checked />
+                  <span class="text">Pay by Card Credit</span>
+                </div>
+                <i class="fa-regular fa-credit-card"></i>
+              </label>
+            </div>
+            <div class="mb-3 mt-3 border-bottom border-1 pb-7">
+              <label class="border border-2 rounded-4 p-3 w-100">
+                <div class="d-flex align-items-center gap-5">
+                  <input type="radio" name="pay" />
+                  <span class="text">Paypal</span>
+                </div>
+              </label>
+            </div>
+            <div class="mb-5 mt-5">
+              <label for="formGroupExampleInput31">Card NUMBER</label>
+              <input
+                type="text"
+                class="form-control bg-transparent fg-black"
+                id="formGroupExampleInput31"
+                placeholder="725-532-354-352"
+              />
+            </div>
+            <div class="col-6">
+              <label for="formGroupExampleInput111">DATE</label>
+              <input
+                type="date"
+                id="formGroupExampleInput111"
+                class="form-control bg-transparent fg-black"
+                aria-label="Date"
+              />
+            </div>
+            <div class="col-6">
+              <label for="formGroupExampleInput12">CVC</label>
+              <input
+                type="number"
+                id="formGroupExampleInput12"
+                class="form-control bg-transparent fg-black"
+                placeholder="CVC Code"
+                aria-label="ZIP Code"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 md:col-3">
+          <div class="border p-5">
+            <h2>Order summary</h2>
+
+            <div class="item d-flex gap-3 py-3 border-bottom" data-price="38">
+              <img
+                class="w-25 md:w-50 h-50"
+                src="./assets/WhatsApp Image 2026-11-14 at 8.10.24 PM (1).jpeg"
+                alt=""
+              />
+              <div class="flex-fill">
+                <div class="d-flex justify-content-between fw-bold">
+                  <span>Tray Table</span>
+                  <span>$38.00</span>
+                </div>
+                <p>Color: Black</p>
+                <div
+                  class="d-flex gap-3 border rounded-2 px-2 w-50 justify-content-between"
+                >
+                  <button type="button" class="minus border-0 bg-transparent fg-black">
+                    −
+                  </button>
+                  <span class="num">2</span>
+                  <button type="button" class="plus border-0 bg-transparent fg-black">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item d-flex gap-3 py-3 border-bottom" data-price="38">
+              <img
+                class="w-25 md:w-50 h-50"
+                src="./assets/WhatsApp Image 2026-11-14 at 8.10.24 PM (1).jpeg"
+                alt=""
+              />
+              <div class="flex-fill">
+                <div class="d-flex justify-content-between fw-bold">
+                  <span>Tray Table</span>
+                  <span>$38.00</span>
+                </div>
+                <p>Color: Red</p>
+                <div
+                  class="d-flex gap-3 border rounded-2 px-2 w-50 justify-content-between"
+                >
+                  <button type="button" class="minus border-0 bg-transparent fg-black">
+                    −
+                  </button>
+                  <span class="num">2</span>
+                  <button type="button" class="plus border-0 bg-transparent fg-black">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item d-flex gap-3 py-3 border-bottom" data-price="39">
+              <img
+                class="w-25 md:w-50 h-50"
+                src="./assets/WhatsApp Image 2026-11-14 at 8.10.24 PM (1).jpeg"
+                alt=""
+              />
+              <div class="flex-fill">
+                <div class="d-flex justify-content-between fw-bold">
+                  <span>Table lamp</span>
+                  <span>$39.00</span>
+                </div>
+                <p>Color: gold</p>
+                <div
+                  class="d-flex gap-3 border rounded-2 px-2 w-50 justify-content-between"
+                >
+                  <button type="button fg-black" class="minus border-0 bg-transparent fg-black">
+                    −
+                  </button>
+                  <span class="num">1</span>
+                  <button type="button" class="plus border-0 bg-transparent fg-black">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2 py-3">
+              <input
+                type="text"
+                class="input form-control bg-transparent fg-black"
+                placeholder="Input"
+              />
+              <button
+                type="button"
+                class="apply border-0 bg-black rounded-3 p-1 px-2"
+              >
+                Apply
+              </button>
+            </div>
+
+            <div
+              class="discount d-flex justify-content-between py-2 border-bottom"
+            >
+              <span><i class="fa-solid fa-tag"></i> JenkateMW</span>
+              <span class="off fg-success" data-off="25"
+                >-$25.00 (Remove)
+              </span>
+            </div>
+
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span>Shipping</span>
+              <span class="fw-bold">Free</span>
+            </div>
+
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span>Subtotal</span>
+              <span class="sub fw-bold">$0.00</span>
+            </div>
+
+            <div class="d-flex justify-content-between py-2 fw-bold fs-4">
+              <span>Total</span>
+              <span class="all">$0.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="pb-12 col-12 md:col-7">
+          <button type="button" class="border-0 bg-black w-100 py-3 rounded-3">
+            Place Order
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="product-footer bg-semiblack fg-white">
+      <div class="container p-12">
+        <div
+          class="heading d-flex justify-content-between align-items-center mb-12 align-items-center"
+        >
+          <div class="title">
+            <h3 class="border-end w-fit pe-8 border-5 d-inline-block fs-2xl">
+              VisioCreate
+            </h3>
+            <hr class="w-25 m-auto mt-3 mb-4 border-4 d-none" />
+            <p class="fg-gray d-inline-block ps-8 fs-lg">
+              Gift & Decoration Store
+            </p>
+          </div>
+          <ul class="d-flex gap-12">
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Shop</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Product</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none fg-gray fs-lg"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="copyright d-flex justify-content-between align-items-center border-top border-2 pt-6 pb-6 fs-lg"
+        >
+          <div class="d-flex align-items-center">
+            <p class="me-12 fg-gray mb-0">
+              Copyright &copy; 2023 VisioCreate. All rights reserved
+            </p>
+            <div class="links">
+              <a href="#" class="fg-white fw-bold text-decoration-none me-12"
+                >Privacy Policy</a
+              >
+              <a href="#" class="fg-white fw-bold text-decoration-none"
+                >Terms of Use</a
+              >
+            </div>
+          </div>
+          <ul class="icons d-flex gap-6 mb-0 fs-xl">
+            <li>
+              <a href="#" class="fg-white"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="fg-white"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="fg-white">
+                <i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const items = document.querySelectorAll(".item");
+      const sub = document.querySelector(".sub");
+      const all = document.querySelector(".all");
+      let discount = 25;
+      function update() {
+        let total = 0;
+        items.forEach((item) => {
+          let price = Number(item.dataset.price);
+          let quantity = Number(item.querySelector(".num").textContent);
+          total += price * quantity;
+        });
+        sub.textContent = "$" + total.toFixed(2);
+        all.textContent = "$" + (total - discount).toFixed(2);
+      }
+      items.forEach((item) => {
+        let num = item.querySelector(".num");
+        item.querySelector(".plus").onclick = () => {
+          num.textContent++;
+          update();
+        };
+        item.querySelector(".minus").onclick = () => {
+          if (num.textContent > 1) {
+            num.textContent--;
+            update();
+          }
+        };
+      });
+
+      document.querySelector(".apply").onclick = () => {
+        let code = document.querySelector(".input").value;
+        if (code === "JenkateMW") {
+          discount = 25;
+          update();
+        } else {
+          alert("Wrong Coupon!");
+        }
+      };
+      document.querySelector(".remove").onclick = () => {
+        discount = 0;
+        document.querySelector(".discount").classList.add("d-none");
+        update();
+      };
+      update();
+    </script>
+  </body>
+</html>

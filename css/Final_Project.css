@@ -90,6 +90,9 @@ ol {
 .fg-lightblack {
   color: #343839;
 }
+.bg-light-gray{
+  background-color: lightgrey;
+}
 
 .fg-blue {
   color: #377dff;
@@ -114,7 +117,6 @@ header {
 }
 .img {
   background-image: url(/assets/image_no_text.png);
-  /* background-position: right; */
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -172,6 +174,19 @@ del {
 .fg-blue {
   color: #3b82f6;
 }
+.nav-owl{
+    top: -10%;
+  position: absolute;
+  right: 0;
+  
+}
+.owl-prev span{
+  font-size: 50px;
+}
+.owl-next span{
+  font-size: 50px;
+}
+
 
 /* Start Product Page */
 .alert-product {
@@ -330,3 +345,64 @@ del {
 /* End Contact Us Page
 
 
+/* blog page */
+
+a{color: inherit;
+text-decoration: none;}
+
+ul{list-style: none;}
+
+
+
+.custom-bg{background-image: url(../assets/aaecbb349c10303473248e39b7644bc5.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
+border-radius: 20px;
+line-height: 4;
+padding: 10%;}
+
+.div-width{width: 90%;}
+.img-width{width: 100%;}
+
+.btn-style{border: none;
+background-color: transparent;
+color: darkgrey;}
+
+
+.bg-img{background-image:url(../assets/1fad045c1c45a20d731a3d1b79754b62.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+line-height: 2;
+padding: 10%;}
+/* blog page */
+
+
+/* cart page */
+.no-style{border-radius: 50%;
+width: 26pX;
+height: 26PX;
+background-color: black;
+color: white;}
+
+.custom-product{width: 35%;}
+
+.remove-btn{background-color: transparent;
+border: none;}
+
+.coupon-btn{background-color: transparent;
+color: black;
+border: none;}
+
+
+.calc-button{background-color: transparent;
+border: none;}
+
+
+/* cart */
+/* details */
+.img-details{
+  width: 100%;
+height: 400px;
+}
+
+.model-img{width: 100%;}
