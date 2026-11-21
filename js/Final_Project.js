@@ -131,6 +131,7 @@ const days = document.querySelector("#days");
 const hours = document.querySelector("#hours");
 const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
+if(days){
 
 if (days && hours && minutes && seconds) {
   let d = Number(days.innerHTML);
@@ -151,28 +152,34 @@ if (days && hours && minutes && seconds) {
       if (m > 0) {
         m--;
       } else {
-        m = 59;
-
-        if (h > 0) {
-          h--;
+        s = 59;
+  
+        if (m > 0) {
+          m--;
         } else {
-          h = 23;
-          d--;
+          m = 59;
+  
+          if (h > 0) {
+            h--;
+          } else {
+            h = 23;
+            d--;
+          }
         }
       }
+  
+      days.innerHTML = d;
+      hours.innerHTML = h;
+      minutes.innerHTML = m;
+      seconds.innerHTML = s;
+  
+      setTimeout(() => {
+        countdown();
+      }, 1000);
     }
-
-    days.innerHTML = d;
-    hours.innerHTML = h;
-    minutes.innerHTML = m;
-    seconds.innerHTML = s;
-
-    setTimeout(() => {
-      countdown();
-    }, 1000);
-  }
-
-countdown();
+  
+  countdown();
+}
 
 
 
