@@ -36,6 +36,7 @@
 //     }
 //   });
 //Choose Color for Hoodie
+
 let colors = document.querySelectorAll(".choose-color .img-list li");
 
 let colorName = document.querySelector("#selected-color");
