@@ -1,4 +1,3 @@
-
 // // show or hide password
 // const password = document.getElementById("password");
 // const passwordIcon = document.getElementById("password-icon");
@@ -40,27 +39,27 @@
 let colors = document.querySelectorAll(".choose-color .img-list li");
 
 let colorName = document.querySelector("#selected-color");
+if (colorName)
+  colors.forEach(function (color) {
+    color.addEventListener("click", function () {
+      colors.forEach(function (item) {
+        item.classList.remove("active");
+      });
 
-colors.forEach(function (color) {
-  color.addEventListener("click", function () {
-    colors.forEach(function (item) {
-      item.classList.remove("active");
+      color.classList.add("active");
+
+      colorName.textContent = color.dataset.color;
     });
-
-    color.classList.add("active");
-
-    colorName.textContent = color.dataset.color;
   });
-});
 // the Counter for the hoodie
 let minus = document.querySelector("#minus");
 let plus = document.querySelector("#plus");
 let quantity = document.querySelector("#quantity");
-if (plus)
+if (plus && quantity)
   plus.addEventListener("click", function () {
     quantity.textContent++;
   });
-if (minus)
+if (minus && quantity)
   minus.addEventListener("click", function () {
     if (quantity.textContent > 1) {
       quantity.textContent--;
@@ -78,66 +77,46 @@ if (wishlist)
     heart.classList.toggle("fa-solid");
   });
 
-var owl = $("#two");
-owl.owlCarousel({
-  items: 4.5,
-  loop: true,
-  dots: true,
-  margin: 10,
-  autoplay: true,
-  autoplayTimeout: 1000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1.5,
-      nav: true,
-      dots:true
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
+if (typeof $ !== "undefined") {
+  var owl = $(".owl-carousel");
+
+  if (owl.length) {
+    owl.owlCarousel({
       items: 4.5,
-    },
-  },
-});
-var owl1 = $("#one");
-owl1.owlCarousel({
-  items: 4.5,
-  loop: true,
-  dots: false,
-  margin: 1,
-  autoplay: true,
-  autoplayTimeout: 1000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1.5,
-      nav: true,
-    },
-    600: {
-      items: 1.5,
-    },
-    1000: {
-      items: 4.5,
-    },
-  },
-});
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1.5,
+        },
+        600: {
+          items: 1.5,
+        },
+        1000: {
+          items: 4.5,
+        },
+      },
+    });
+  }
+}
+
 // ======================================================
 
 let wishes = document.querySelectorAll(".wish");
+if (wishes)
+  wishes.forEach(function (wish) {
+    wish.addEventListener("click", function () {
+      wish.classList.toggle("active");
 
-wishes.forEach(function (wish) {
-  wish.addEventListener("click", function () {
-    wish.classList.toggle("active");
+      let heart = wish.querySelector("i");
 
-    let heart = wish.querySelector("i");
-
-    heart.classList.toggle("fa-regular");
-    heart.classList.toggle("fa-solid");
+      heart.classList.toggle("fa-regular");
+      heart.classList.toggle("fa-solid");
+    });
   });
-});
-const cartBtn = document.querySelector(".cart-btn");
 
 document.addEventListener("click", function (e) {
   if (e.target.closest(".button-cart")) {
@@ -145,18 +124,20 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Counter Time Down
+
+
 
 const days = document.querySelector("#days");
 const hours = document.querySelector("#hours");
 const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
 
-let d = Number(days.innerHTML);
-let h = Number(hours.innerHTML);
-let m = Number(minutes.innerHTML);
-let s = Number(seconds.innerHTML);
-if (days)
+if (days && hours && minutes && seconds) {
+  let d = Number(days.innerHTML);
+  let h = Number(hours.innerHTML);
+  let m = Number(minutes.innerHTML);
+  let s = Number(seconds.innerHTML);
+
   function countdown() {
     if (d === 0 && h === 0 && m === 0 && s === 0) {
       return;
@@ -192,3 +173,113 @@ if (days)
   }
 
 countdown();
+
+
+
+
+// cart:
+
+
+
+let s1 = 39,
+    s2 = 38,
+    s3 = 39;
+
+let shipping = 0,
+    discount = 0;
+
+const log = console.log;
+
+const calcTotal = () => {
+    let all = s1 + s2 + s3;
+    let discountAmount = (all * discount) / 100;
+    let finalPrice = all + shipping - discountAmount;
+
+    document.querySelector("#cartSubtotal").textContent = "$" + all.toFixed(2);
+    document.querySelector("#discountValue").textContent = "$" + discountAmount.toFixed(2);
+    document.querySelector("#total").textContent = "$" + finalPrice.toFixed(2);
+
+    let q1 = +document.querySelector("#num1").textContent;
+    let q2 = +document.querySelector("#num2").textContent;
+    let q3 = +document.querySelector("#num3").textContent;
+    let totalQty = q1 + q2 + q3;
+
+    if (document.querySelector("#totalQuantity")) {
+        document.querySelector("#totalQuantity").textContent = totalQty;
+    }
+    if (document.querySelector(".cart-btn")) {
+        document.querySelector(".cart-btn").textContent = totalQty;
+    }
+};
+
+function changeQuantity(numId, price, subtotalId, change) {
+    let num = document.querySelector("#" + numId);
+    let x = +num.textContent;
+    x = x + change;
+
+    if (x < 1) {
+        alert("Minimum quantity is 1");
+    } else {
+        num.textContent = x;
+        let subtotal = price * x;
+        document.querySelector("#" + subtotalId).textContent = "$" + subtotal.toFixed(2);
+
+        switch (subtotalId) {
+            case "subtotal1":
+                s1 = subtotal;
+                break;
+            case "subtotal2":
+                s2 = subtotal;
+                break;
+            default:
+                s3 = subtotal;
+        }
+
+        calcTotal();
+    }
+}
+
+function removeProduct(productId, subtotalId) {
+    document.querySelector("#" + productId).style.display = "none";
+    document.querySelector("#" + subtotalId).textContent = "$0.00";
+
+    if (subtotalId == "subtotal1") {
+        s1 = 0;
+        document.querySelector("#num1").textContent = 0;
+    } else if (subtotalId == "subtotal2") {
+        s2 = 0;
+        document.querySelector("#num2").textContent = 0;
+    } else {
+        s3 = 0;
+        document.querySelector("#num3").textContent = 0;
+    }
+
+    calcTotal();
+}
+
+function shippingCost(price) {
+    shipping = price;
+    calcTotal();
+}
+
+const applyCouponBtn = document.querySelector("#applyCouponBtn");
+if (applyCouponBtn) {
+    applyCouponBtn.addEventListener("click", function () {
+        let code = document.querySelector("#couponInput").value;
+        let msg = document.querySelector("#couponMessage");
+
+        if (code == "SAVE10") {
+            discount = 10;
+            msg.textContent = "Coupon applied successfully";
+            msg.style.color = "green";
+        } else {
+            discount = 0;
+            msg.textContent = "Invalid coupon code";
+            msg.style.color = "red";
+        }
+
+        calcTotal();
+    });
+}
+
+calcTotal();
