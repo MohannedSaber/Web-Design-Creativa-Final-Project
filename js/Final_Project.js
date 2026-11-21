@@ -36,6 +36,7 @@
 //     }
 //   });
 //Choose Color for Hoodie
+
 let colors = document.querySelectorAll(".choose-color .img-list li");
 
 let colorName = document.querySelector("#selected-color");
@@ -119,11 +120,11 @@ if (wishes)
   });
 
 // ======================================================
-const cartBtn = document.querySelector(".cart-btn");
-if (cartBtn)
+const btnCart = document.querySelector(".cart-btn");
+if (btnCart)
   document.addEventListener("click", function (e) {
     if (e.target.closest(".button-cart")) {
-      cartBtn.textContent = Number(cartBtn.textContent) + 1;
+      btnCart.textContent = Number(btnCart.textContent) + 1;
     }
   });
 
@@ -176,3 +177,121 @@ if (days && hours && minutes && seconds) {
 
   countdown();
 }
+
+// show or hide password
+const password = document.getElementById("password");
+const passwordIcon = document.getElementById("password-icon");
+if (passwordIcon)
+  passwordIcon.addEventListener("click", () => {
+    const show = password.type === "password";
+    password.type = show ? "text" : "password";
+    passwordIcon.setAttribute(
+      "aria-label",
+      show ? "Hide password" : "Show password",
+    );
+    passwordIcon.style.opacity = show ? "0.5" : "1";
+  });
+
+// form validation
+const form = document.getElementById("sign-in-form");
+const message = document.getElementById("message");
+if (form)
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const inputfields = form.querySelectorAll("[required]");
+    let isValid = true;
+    inputfields.forEach((f) => {
+      const value = f.value.trim() !== "";
+      f.classList.toggle("is-invalid", !value);
+      if (!value) isValid = false;
+    });
+    if (isValid) {
+      message.classList.remove("d-none");
+      setTimeout(() => message.classList.add("d-none"), 3000);
+      console.log("signed in", {
+        email: form.email.value,
+        password: form.password.value,
+        rememberMe: form.rememberMe.checked,
+      });
+    }
+  });
+
+const layout = document.getElementById("productLayout");
+
+if (layout) {
+  const category = document.getElementById("category");
+  const prices = document.getElementById("prices");
+  const sortSelect = document.getElementById("sort");
+  const cards = Array.from(layout.children).filter((card) => card.dataset.cat);
+  cards.forEach((card, i) => {
+    card.dataset.order = i;
+  });
+
+  // filtering
+  function filterCards() {
+    const selected = category.value.trim().toLowerCase();
+    cards.forEach((card) => {
+      const cardCat = (card.dataset.cat || "").trim().toLowerCase();
+      card.classList.toggle(
+        "d-none",
+        !(selected === "all" || cardCat === selected),
+      );
+    });
+  }
+
+  // sorting
+  function sortCards() {
+    const list = cards.slice();
+
+    if (prices.value === "low") {
+      list.sort((a, b) => a.dataset.price - b.dataset.price);
+    } else if (prices.value === "high") {
+      list.sort((a, b) => b.dataset.price - a.dataset.price);
+    } else if (sortSelect.value === "atoz") {
+      list.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
+    } else if (sortSelect.value === "ztoa") {
+      list.sort((a, b) => b.dataset.name.localeCompare(a.dataset.name));
+    } else {
+      // default: restore original order
+      list.sort((a, b) => a.dataset.order - b.dataset.order);
+    }
+
+    list.forEach((card) => layout.appendChild(card));
+  }
+
+  if (category) category.addEventListener("change", filterCards);
+
+  if (prices) {
+    prices.addEventListener("change", () => {
+      sortSelect.value = "default";
+      sortCards();
+    });
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", () => {
+      prices.value = "all";
+      sortCards();
+    });
+  }
+}
+// add to cart button
+  const cartBtn = document.querySelector(".cart-btn");
+  let cartCount = 0;
+let btna = document.querySelectorAll(".btn-cart");
+btna.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    cartCount++;
+    if (cartBtn) cartBtn.textContent = cartCount;
+  });
+});
+
+// wishlist button (safe on any page, since querySelectorAll returns an empty list)
+document.querySelectorAll(".wishlist-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const icon = btn.querySelector("i");
+    if (!icon) return;
+    icon.classList.toggle("fa-regular");
+    icon.classList.toggle("fa-solid");
+  });
+});
