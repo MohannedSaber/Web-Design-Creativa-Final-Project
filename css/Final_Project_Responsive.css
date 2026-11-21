@@ -648,39 +648,8 @@
     }
 }
 
-/* Small mobile */
-@media (max-width: 500px) {
-    section.container .img-width {
-        height: 195px;
-    }
-
-    section .container .custom-product {
-        width: 64px;
-        height: 78px;
-    }
-}
-
-/* Portrait / Landscape */
-@media (orientation: portrait) {
-}
-
-@media (orientation: landscape) {
-}
-
-/* Print */
-@media print {
-    nav.navbar-content,
-    footer.product-footer {
-        display: none;
-    }
-}
-
 
 /* details */
-/* =========================================
-   Mobile First Base Styles (< 768px)
-   Matches Blog Post 01 (mobile).jpg layout
-   ========================================= */
 
 .navbar-content .heading {
   width: auto;
@@ -778,9 +747,7 @@
   margin-right: 0;
 }
 
-/* =========================================
-   Tablet & Up (>= 768px)
-   ========================================= */
+
 @media (min-width: 768px) {
   .more-Products .images {
     flex-direction: row;
@@ -793,49 +760,5 @@
 
   .join .details {
     width: 75%;
-  }
-}
-
-/* =========================================
-   Desktop & Large Screens (>= 992px)
-   ========================================= */
-@media (min-width: 992px) {
-  .navbar-content .heading {
-    width: 25%;
-  }
-
-  .join .details {
-    width: 50%;
-  }
-
-  .product-footer .container {
-    padding: 48px;
-  }
-
-  .product-footer .heading,
-  .product-footer .copyright {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  .product-footer .title h3 {
-    display: inline-block;
-    border-right: 2px solid currentColor;
-    padding-right: 24px;
-  }
-
-  .product-footer .title p {
-    display: inline-block;
-    padding-left: 24px;
-  }
-
-  .product-footer .heading ul {
-    flex-direction: row;
-    gap: 40px;
-  }
-
-  .product-footer .copyright > div:first-child {
-    flex-direction: row;
-    gap: 32px;
   }
 }

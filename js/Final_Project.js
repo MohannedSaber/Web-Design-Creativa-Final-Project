@@ -120,12 +120,6 @@ if (wishes)
   });
 
 document.addEventListener("click", function (e) {
-  if (e.target.closest(".button-cart")) {
-    cartBtn.textContent = Number(cartBtn.textContent) + 1;
-  }
-});let cartBtn = document.querySelector(".cart-btn");
-
-document.addEventListener("click", function (e) {
     if (e.target.closest(".button-cart") && cartBtn) {
         cartBtn.textContent = Number(cartBtn.textContent) + 1;
     }
@@ -316,17 +310,16 @@ if (applyCouponBtn) {
 
 calcTotal();
 
-const items = document.querySelectorAll(".item");
-const items = document.querySelectorAll(".item");
+const cartItems = document.querySelectorAll(".item");
 const sub = document.querySelector(".sub");
 const all = document.querySelector(".all");
 
-if (items.length > 0 && sub && all) {
+if (cartItems.length > 0 && sub && all)  {
 
     function update() {
         let total = 0;
 
-        items.forEach((item) => {
+        cartItems.forEach((item) => {
             let price = Number(item.dataset.price);
             let quantity = Number(item.querySelector(".num").textContent);
 
@@ -337,7 +330,7 @@ if (items.length > 0 && sub && all) {
         all.textContent = "$" + (total - discount).toFixed(2);
     }
 
-    items.forEach((item) => {
+    cartItems.forEach((item) => {
         let num = item.querySelector(".num");
         let plus = item.querySelector(".plus");
         let minus = item.querySelector(".minus");
