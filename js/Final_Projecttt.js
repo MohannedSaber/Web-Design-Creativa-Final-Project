@@ -37,7 +37,6 @@ if (form)
     }
   });
   
-window.addEventListener("load", function () {
 const layout     = document.getElementById("productLayout");
 const category   = document.getElementById("category");
 const prices     = document.getElementById("prices");
@@ -109,4 +108,4 @@ document.querySelectorAll(".wishlist-btn").forEach(function (btn) {
     icon.classList.toggle("fa-solid");
     });
 });
-});
+
