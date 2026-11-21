@@ -1,40 +1,41 @@
-// show or hide password
-const password = document.getElementById("password");
-const passwordIcon = document.getElementById("password-icon");
-if (passwordIcon)
-  passwordIcon.addEventListener("click", () => {
-    const show = password.type === "password";
-    password.type = show ? "text" : "password";
-    passwordIcon.setAttribute(
-      "aria-label",
-      show ? "Hide password" : "Show password",
-    );
-    passwordIcon.style.opacity = show ? "0.5" : "1";
-  });
 
-// form validation
-const form = document.getElementById("sign-in-form");
-const message = document.getElementById("message");
-if (form)
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const inputfields = form.querySelectorAll("[required]");
-    let isValid = true;
-    inputfields.forEach((f) => {
-      const value = f.value.trim() !== "";
-      f.classList.toggle("is-invalid", !value);
-      if (!value) isValid = false;
-    });
-    if (isValid) {
-      message.classList.remove("d-none");
-      setTimeout(() => message.classList.add("d-none"), 3000);
-      console.log("signed in", {
-        email: form.email.value,
-        password: form.password.value,
-        rememberMe: form.rememberMe.checked,
-      });
-    }
-  });
+// // show or hide password
+// const password = document.getElementById("password");
+// const passwordIcon = document.getElementById("password-icon");
+// if (passwordIcon)
+//   passwordIcon.addEventListener("click", () => {
+//     const show = password.type === "password";
+//     password.type = show ? "text" : "password";
+//     passwordIcon.setAttribute(
+//       "aria-label",
+//       show ? "Hide password" : "Show password",
+//     );
+//     passwordIcon.style.opacity = show ? "0.5" : "1";
+//   });
+
+// // form validation
+// const form = document.getElementById("sign-in-form");
+// const message = document.getElementById("message");
+// if (form)
+//   form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const inputfields = form.querySelectorAll("[required]");
+//     let isValid = true;
+//     inputfields.forEach((f) => {
+//       const value = f.value.trim() !== "";
+//       f.classList.toggle("is-invalid", !value);
+//       if (!value) isValid = false;
+//     });
+//     if (isValid) {
+//       message.classList.remove("d-none");
+//       setTimeout(() => message.classList.add("d-none"), 3000);
+//       console.log("signed in", {
+//         email: form.email.value,
+//         password: form.password.value,
+//         rememberMe: form.rememberMe.checked,
+//       });
+//     }
+//   });
 //Choose Color for Hoodie
 let colors = document.querySelectorAll(".choose-color .img-list li");
 
@@ -115,7 +116,7 @@ owl1.owlCarousel({
       nav: true,
     },
     600: {
-      items: 3,
+      items: 1.5,
     },
     1000: {
       items: 4.5,
@@ -143,3 +144,51 @@ document.addEventListener("click", function (e) {
     cartBtn.textContent = Number(cartBtn.textContent) + 1;
   }
 });
+
+// Counter Time Down
+
+const days = document.querySelector("#days");
+const hours = document.querySelector("#hours");
+const minutes = document.querySelector("#minutes");
+const seconds = document.querySelector("#seconds");
+
+let d = Number(days.innerHTML);
+let h = Number(hours.innerHTML);
+let m = Number(minutes.innerHTML);
+let s = Number(seconds.innerHTML);
+if (days)
+  function countdown() {
+    if (d === 0 && h === 0 && m === 0 && s === 0) {
+      return;
+    }
+
+    if (s > 0) {
+      s--;
+    } else {
+      s = 59;
+
+      if (m > 0) {
+        m--;
+      } else {
+        m = 59;
+
+        if (h > 0) {
+          h--;
+        } else {
+          h = 23;
+          d--;
+        }
+      }
+    }
+
+    days.innerHTML = d;
+    hours.innerHTML = h;
+    minutes.innerHTML = m;
+    seconds.innerHTML = s;
+
+    setTimeout(() => {
+      countdown();
+    }, 1000);
+  }
+
+countdown();

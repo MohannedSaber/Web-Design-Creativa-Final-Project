@@ -1,5 +1,73 @@
-* {
-  font-family: "Cairo", sans-serif;
+.image-card{
+    position: relative;
+    min-height: 530px;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.sign-in-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #9ca3af;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.sign-in-btn{
+    background-color: #2563eb ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.bg-color{
+  background-color:#eeeeee;
+}
+.a-hover:hover{
+    color: black;
+}
+
+.announcement-bar{
+    background-color: #eeeeee ;
+}
+.main{
+  min-height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/WhatsApp Image 2026-11-18 at 5.00.54 PM.jpeg");
+  border-radius: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.filter-select{
+  min-width: 180px;
+}
+
+.img-wrap{
+  min-height: 250px;
+  flex: 0 0 50%;
+}
+.img-wrap img{
+  max-width: 100%;
+  max-height: 200px;
+}
+
+
+
+
+
+
+
+*{
+    font-family: "Cairo" , sans-serif;
 }
 
 html {
@@ -21,6 +89,13 @@ ol {
 
 .fg-lightblack {
   color: #343839;
+}
+.bg-light-gray{
+  background-color: lightgrey;
+}
+
+.fg-blue {
+  color: #377dff;
 }
 
 .bg-semiblack {
@@ -114,6 +189,13 @@ del {
 
 
 /* Start Product Page */
+.alert-product {
+  background-color: #eee;
+}
+
+.product:hover {
+  color: white;
+}
 
 .breadcrumb-item:last-child .breadcrumb-link {
   color: black;
@@ -123,22 +205,32 @@ del {
   background-color: #f3f5f7;
 }
 
-.premium-hoodie .row .col-6 .images .image {
+.premium-hoodie .row .col-6 .images-hoodie .image {
   width: 47%;
 }
 
-.premium-hoodie .row .col-6 .images .image .New {
+.premium-hoodie .row .col-6 .images-hoodie .image .New {
   top: 5%;
   left: 6%;
 }
 
-.premium-hoodie .row .col-6 .images .image .dis {
+.premium-hoodie .row .col-6 .images-hoodie .image .dis {
   top: 27%;
   left: 6%;
 }
 
 .premium-hoodie .price {
   border-color: #e8ecef;
+}
+
+.premium-hoodie .counter-time div {
+  background-color: #eee;
+  padding: 5%;
+}
+
+.premium-hoodie .counter-down {
+  border-color: #e8ecef;
+
 }
 
 .premium-hoodie .row .col-6 .price svg {
@@ -206,14 +298,25 @@ del {
   right: 0;
 }
 
-.owl-carousel .item:first-child .New {
+.owl-products .item:first-child .New {
   top: 5%;
   left: 5%;
 }
 
-.owl-carousel .item:first-child .dis {
-  top: 30%;
+.owl-products .item:first-child .dis {
+  top: 20%;
   left: 5%;
+}
+
+.owl-products .item .owl-add-to-cart {
+  bottom: 25%;
+  left: 19%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.owl-products .item:hover .owl-add-to-cart {
+  opacity: 1;
 }
 
 /* End Product Page */
@@ -239,39 +342,6 @@ del {
 .support {
   background-color: #eee;
 }
-/* End Contact Us Page */
-.image-card {
-  position: relative;
-  height: 100%;
-  min-height: 500px;
-  border-radius: 25px;
-  overflow: hidden;
-}
+/* End Contact Us Page
 
-.sign-in-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-.form-input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #9ca3af;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.sign-in-btn {
-  background-color: #2563eb;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-.bg-color {
-  background-color: #eeeeee;
-}
-.a-hover:hover {
-  color: black;
-}
