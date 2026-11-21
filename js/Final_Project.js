@@ -1,4 +1,3 @@
-
 // // show or hide password
 // const password = document.getElementById("password");
 // const passwordIcon = document.getElementById("password-icon");
@@ -40,27 +39,27 @@
 let colors = document.querySelectorAll(".choose-color .img-list li");
 
 let colorName = document.querySelector("#selected-color");
+if (colorName)
+  colors.forEach(function (color) {
+    color.addEventListener("click", function () {
+      colors.forEach(function (item) {
+        item.classList.remove("active");
+      });
 
-colors.forEach(function (color) {
-  color.addEventListener("click", function () {
-    colors.forEach(function (item) {
-      item.classList.remove("active");
+      color.classList.add("active");
+
+      colorName.textContent = color.dataset.color;
     });
-
-    color.classList.add("active");
-
-    colorName.textContent = color.dataset.color;
   });
-});
 // the Counter for the hoodie
 let minus = document.querySelector("#minus");
 let plus = document.querySelector("#plus");
 let quantity = document.querySelector("#quantity");
-if (plus)
+if (plus && quantity)
   plus.addEventListener("click", function () {
     quantity.textContent++;
   });
-if (minus)
+if (minus && quantity)
   minus.addEventListener("click", function () {
     if (quantity.textContent > 1) {
       quantity.textContent--;
@@ -78,42 +77,46 @@ if (wishlist)
     heart.classList.toggle("fa-solid");
   });
 
-var owl = $(".owl-carousel");
-owl.owlCarousel({
-  items: 4.5,
-  loop: true,
-  margin: 10,
-  autoplay: true,
-  autoplayTimeout: 1000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1.5,
-    },
-    600: {
-      items: 1.5,
-    },
-    1000: {
+if (typeof $ !== "undefined") {
+  var owl = $(".owl-carousel");
+
+  if (owl.length) {
+    owl.owlCarousel({
       items: 4.5,
-    },
-  },
-});
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1.5,
+        },
+        600: {
+          items: 1.5,
+        },
+        1000: {
+          items: 4.5,
+        },
+      },
+    });
+  }
+}
 
 // ======================================================
 
 let wishes = document.querySelectorAll(".wish");
+if (wishes)
+  wishes.forEach(function (wish) {
+    wish.addEventListener("click", function () {
+      wish.classList.toggle("active");
 
-wishes.forEach(function (wish) {
-  wish.addEventListener("click", function () {
-    wish.classList.toggle("active");
+      let heart = wish.querySelector("i");
 
-    let heart = wish.querySelector("i");
-
-    heart.classList.toggle("fa-regular");
-    heart.classList.toggle("fa-solid");
+      heart.classList.toggle("fa-regular");
+      heart.classList.toggle("fa-solid");
+    });
   });
-});
-const cartBtn = document.querySelector(".cart-btn");
 
 document.addEventListener("click", function (e) {
   if (e.target.closest(".button-cart")) {
@@ -130,18 +133,24 @@ const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
 if(days){
 
-  let d = Number(days.innerHTML)  || 0;
-  let h = Number(hours.innerHTML) || 0;
-  let m = Number(minutes.innerHTML) || 0;
-  let s = Number(seconds.innerHTML) || 0;
-  if (days)
-    function countdown() {
-      if (d === 0 && h === 0 && m === 0 && s === 0) {
-        return;
-      }
-  
-      if (s > 0) {
-        s--;
+if (days && hours && minutes && seconds) {
+  let d = Number(days.innerHTML);
+  let h = Number(hours.innerHTML);
+  let m = Number(minutes.innerHTML);
+  let s = Number(seconds.innerHTML);
+
+  function countdown() {
+    if (d === 0 && h === 0 && m === 0 && s === 0) {
+      return;
+    }
+
+    if (s > 0) {
+      s--;
+    } else {
+      s = 59;
+
+      if (m > 0) {
+        m--;
       } else {
         s = 59;
   
@@ -281,5 +290,3 @@ if (applyCouponBtn) {
 }
 
 calcTotal();
-
-
