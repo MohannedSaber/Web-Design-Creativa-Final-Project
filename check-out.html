@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -134,7 +134,7 @@
         ></a>
         <button
           type="button"
-          class="border-0 bg-black rounded-pill h-50 cart-btn"
+          class="border-0 bg-black rounded-pill h-50 cart-btn fg-white"
           aria-label="#"
         >
           0
@@ -425,7 +425,7 @@
               />
               <button
                 type="button"
-                class="apply border-0 bg-black rounded-3 p-1 px-2"
+                class="apply border-0 bg-black rounded-3 p-1 px-2 fg-white"
               >
                 Apply
               </button>
@@ -457,7 +457,7 @@
           </div>
         </div>
         <div class="pb-12 col-12 md:col-7">
-          <button type="button" class="border-0 bg-black w-100 py-3 rounded-3">
+          <button type="button" class="border-0 bg-black w-100 py-3 rounded-3 fg-white">
             Place Order
           </button>
         </div>
@@ -533,51 +533,6 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const items = document.querySelectorAll(".item");
-      const sub = document.querySelector(".sub");
-      const all = document.querySelector(".all");
-      let discount = 25;
-      function update() {
-        let total = 0;
-        items.forEach((item) => {
-          let price = Number(item.dataset.price);
-          let quantity = Number(item.querySelector(".num").textContent);
-          total += price * quantity;
-        });
-        sub.textContent = "$" + total.toFixed(2);
-        all.textContent = "$" + (total - discount).toFixed(2);
-      }
-      items.forEach((item) => {
-        let num = item.querySelector(".num");
-        item.querySelector(".plus").onclick = () => {
-          num.textContent++;
-          update();
-        };
-        item.querySelector(".minus").onclick = () => {
-          if (num.textContent > 1) {
-            num.textContent--;
-            update();
-          }
-        };
-      });
-
-      document.querySelector(".apply").onclick = () => {
-        let code = document.querySelector(".input").value;
-        if (code === "JenkateMW") {
-          discount = 25;
-          update();
-        } else {
-          alert("Wrong Coupon!");
-        }
-      };
-      document.querySelector(".remove").onclick = () => {
-        discount = 0;
-        document.querySelector(".discount").classList.add("d-none");
-        update();
-      };
-      update();
-    </script>
+    <script src="js/Final_Project.js"></script>
   </body>
 </html>
