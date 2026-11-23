@@ -1,41 +1,6 @@
-// // show or hide password
-// const password = document.getElementById("password");
-// const passwordIcon = document.getElementById("password-icon");
-// if (passwordIcon)
-//   passwordIcon.addEventListener("click", () => {
-//     const show = password.type === "password";
-//     password.type = show ? "text" : "password";
-//     passwordIcon.setAttribute(
-//       "aria-label",
-//       show ? "Hide password" : "Show password",
-//     );
-//     passwordIcon.style.opacity = show ? "0.5" : "1";
-//   });
 
-// // form validation
-// const form = document.getElementById("sign-in-form");
-// const message = document.getElementById("message");
-// if (form)
-//   form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     const inputfields = form.querySelectorAll("[required]");
-//     let isValid = true;
-//     inputfields.forEach((f) => {
-//       const value = f.value.trim() !== "";
-//       f.classList.toggle("is-invalid", !value);
-//       if (!value) isValid = false;
-//     });
-//     if (isValid) {
-//       message.classList.remove("d-none");
-//       setTimeout(() => message.classList.add("d-none"), 3000);
-//       console.log("signed in", {
-//         email: form.email.value,
-//         password: form.password.value,
-//         rememberMe: form.rememberMe.checked,
-//       });
-//     }
-//   });
 //Choose Color for Hoodie
+
 let colors = document.querySelectorAll(".choose-color .img-list li");
 
 let colorName = document.querySelector("#selected-color");
@@ -119,10 +84,26 @@ if (wishes)
   });
 
 document.addEventListener("click", function (e) {
+<<<<<<< HEAD
   if (e.target.closest(".button-cart")) {
     cartBtn.textContent = Number(cartBtn.textContent) + 1;
   }
 });let cartBtn = document.querySelector(".cart-btn");
+=======
+    if (e.target.closest(".button-cart") && cartBtn) {
+        cartBtn.textContent = Number(cartBtn.textContent) + 1;
+    }
+});
+
+const cartBtn =document.querySelector(".cart-btn")
+let cartCount = 0;
+document.querySelectorAll(".btn-cart").forEach((btn) => {
+    btn.addEventListener("click" , () => {
+        cartCount++;
+        if (cartBtn) cartBtn.textContent = cartCount;
+    });
+});
+>>>>>>> 997249a3a1124defbde76e212ada708388f79a68
 
 document.addEventListener("click", function (e) {
     if (e.target.closest(".button-cart") && cartBtn) {
@@ -315,17 +296,29 @@ if (applyCouponBtn) {
 
 calcTotal();
 
+<<<<<<< HEAD
 const items = document.querySelectorAll(".item");
 const items = document.querySelectorAll(".item");
 const sub = document.querySelector(".sub");
 const all = document.querySelector(".all");
 
 if (items.length > 0 && sub && all) {
+=======
+const cartItems = document.querySelectorAll(".item");
+const sub = document.querySelector(".sub");
+const all = document.querySelector(".all");
+
+if (cartItems.length > 0 && sub && all)  {
+>>>>>>> 997249a3a1124defbde76e212ada708388f79a68
 
     function update() {
         let total = 0;
 
+<<<<<<< HEAD
         items.forEach((item) => {
+=======
+        cartItems.forEach((item) => {
+>>>>>>> 997249a3a1124defbde76e212ada708388f79a68
             let price = Number(item.dataset.price);
             let quantity = Number(item.querySelector(".num").textContent);
 
@@ -336,7 +329,11 @@ if (items.length > 0 && sub && all) {
         all.textContent = "$" + (total - discount).toFixed(2);
     }
 
+<<<<<<< HEAD
     items.forEach((item) => {
+=======
+    cartItems.forEach((item) => {
+>>>>>>> 997249a3a1124defbde76e212ada708388f79a68
         let num = item.querySelector(".num");
         let plus = item.querySelector(".plus");
         let minus = item.querySelector(".minus");
